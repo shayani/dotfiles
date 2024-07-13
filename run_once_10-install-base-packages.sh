@@ -7,13 +7,4 @@ sudo apt update && \
   	git \
   	unzip \
   	wget \
-	zsh \
-	  bat \
-  btop \
-  exa \
-  neovim \
-  ripgrep \
-  tldr \
-  tmux \
-  zsh \
-  zoxide
+		zsh
