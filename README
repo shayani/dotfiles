@@ -1,0 +1,12 @@
+# Instruções
+
+## Pré-requisito
+
+O usuário deve ter permissão de `sudo`
+
+## Chezmoi
+
+```
+sh -c "$(curl -fsLS get.chezmoi.io)"
+bin/chezmoi init --apply https://github.com/$GITHUB_USERNAME/dotfiles.git
+```

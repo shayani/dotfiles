@@ -5,6 +5,7 @@ sudo apt update && \
   	curl \
   	gcc \
   	git \
+		procps \
   	unzip \
   	wget \
 		zsh
