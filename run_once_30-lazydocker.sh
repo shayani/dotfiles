@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
-brew install lazydocker
+set -e
+
+/home/linuxbrew/.linuxbrew/bin/brew install lazydocker
