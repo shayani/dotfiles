@@ -16,11 +16,11 @@ usermod -aG sudo shayani
 
 ```
 sudo apt install -y curl git
+sudo sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
 ```
 
 ## Chezmoi
 
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)"
-bin/chezmoi init --apply shayani
+chezmoi init --apply shayani
 ```

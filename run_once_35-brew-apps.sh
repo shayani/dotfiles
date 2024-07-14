@@ -7,7 +7,6 @@ set -e
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew install \
-  chezmoi \
   lazydocker \
   withgraphite/tap/graphite
 
