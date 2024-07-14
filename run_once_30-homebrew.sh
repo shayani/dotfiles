@@ -1,6 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cowsay "Installing HomeBrew"
+
+/bin/bash -c "NONINTERACTIVE=1 $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 

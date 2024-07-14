@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/zsh
+
+cowsay "Installing fonts"
 
 sudo apt install -y fontconfig
 

@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+cowsay "Installing HomeBrew apps"
+
 set -e
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
