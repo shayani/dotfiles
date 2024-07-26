@@ -1,6 +1,8 @@
 #!/usr/bin/zsh
 
-cowsay "Installing HomeBrew"
+echo "______________________"
+echo "Installing HomeBrew"
+echo "======================"
 
 /bin/bash -c "NONINTERACTIVE=1 $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 

@@ -1,8 +1,9 @@
 #!/bin/bash
 
 set -e
-
-cowsay "Installing Oh-my-zsh"
+echo "______________________"
+echo "Installing Oh-my-zsh"
+echo "======================"
 
 rm -rf ~/.oh-my-zsh
 sh -c "ZSH= $(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

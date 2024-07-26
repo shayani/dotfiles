@@ -4,7 +4,6 @@ sudo apt update && \
   age \
 	bat \
   btop \
-  cowsay \
   neovim \
   ripgrep \
   tldr \

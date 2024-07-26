@@ -1,6 +1,8 @@
 #!/usr/bin/zsh
 
-cowsay "Installing HomeBrew apps"
+echo "______________________"
+echo "Installing HomeBrew apps"
+echo "======================"
 
 set -e
 
