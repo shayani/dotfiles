@@ -2,8 +2,9 @@
 sudo apt update && \
 	sudo apt install -y \
   age \
-	bat \
+  bat \
   btop \
+  neofetch \
   neovim \
   ripgrep \
   tldr \
