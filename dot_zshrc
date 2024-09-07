@@ -95,4 +95,4 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [ -e /home/shayani/.nix-profile/etc/profile.d/nix.sh ]; then . /home/shayani/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
