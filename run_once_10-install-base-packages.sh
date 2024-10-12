@@ -8,4 +8,4 @@ sudo apt update && \
 		procps \
   	unzip \
   	wget \
-		zsh
+		ansible-core

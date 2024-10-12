@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  become: yes  # Para rodar comandos como sudo
+  tasks:
+    - name: Atualizar lista de pacotes
+      apt:
+        update_cache: yes
+
+    - name: Garantir que os pacotes necessários estão instalados
+      apt:
+        name:
+          - age
+          - bat
+          - btop
+          - build-essential
+          - curl
+          - curl
+          - gcc
+          - git
+          - git
+          - neofetch
+          - neovim
+          - procps
+          - ripgrep
+          - tldr
+          - tmux
+          - unzip
+          - wget
+          - wget
+          - zoxide
+          - zsh
+        state: latest
