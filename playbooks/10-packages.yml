@@ -10,13 +10,12 @@
       apt:
         name:
           - age
+          - ansible-core
           - bat
           - btop
           - build-essential
           - curl
-          - curl
           - gcc
-          - git
           - git
           - neofetch
           - neovim
@@ -25,7 +24,6 @@
           - tldr
           - tmux
           - unzip
-          - wget
           - wget
           - zoxide
           - zsh
