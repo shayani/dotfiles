@@ -4,7 +4,6 @@ echo "______________________"
 echo "Installing fonts"
 echo "======================"
 
-sudo apt install -y fontconfig
 mkdir -p ~/.local/share/fonts
 
 # JetBrains Mono

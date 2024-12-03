@@ -7,7 +7,7 @@
   tasks:
     - name: Garantir que o Zsh está instalado
       become: yes
-      apt:
+      dnf:
         name: zsh
         state: present
 
