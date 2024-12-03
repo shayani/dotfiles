@@ -1,0 +1,68 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.defaultFormatter": "Shopify.ruby-lsp",
+		"ruby.specCommand": "bin/rspec --format documentation",
+		"[ruby]": {
+			"editor.defaultFormatter": "Shopify.ruby-lsp"
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[erb]": {
+			"editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+		},
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Console",
+				"type": "shell",
+				"command": "bundle exec rails console",
+				"presentation": {
+					"close": true
+				}
+			},
+			{
+				"label": "Overmind (start)",
+				"type": "shell",
+				"command": "rm -rf .overmind.sock && overmind start -f Procfile.dev.overmind",
+				"presentation": {
+					"close": true
+				}
+			},
+			{
+				"label": "All specs in parallel",
+				"type": "shell",
+				"command": "WORKERS=2 bundle exec rake db:parallel:create db:parallel:purge db:parallel:prepare && bundle exec prspec --exclude-pattern '**/system/**' --fail-fast spec",
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "rdbg",
+				"name": "Attach rdbg",
+				"request": "attach"
+			},
+			{
+				"type": "rdbg",
+				"rdbgPath": "bundle exec rdbg",
+				"name": "Run rspec",
+				"useBundler": true,
+				"useTerminal": true,
+				"request": "launch",
+				"command": "rspec",
+				"script": "${file}:${lineNumber}",
+				"args": [],
+				"askParameters": false,
+			}
+		]
+	}
+}
