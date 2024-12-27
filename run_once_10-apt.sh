@@ -8,11 +8,9 @@ sudo apt install -y \
   build-essential \
   curl \
   fontconfig \
-  fzf \
   gcc \
   git \
   neofetch \
-  neovim \
   procps \
   ripgrep \
   tldr \
