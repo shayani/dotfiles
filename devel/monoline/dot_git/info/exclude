@@ -10,3 +10,5 @@ monoline.code-workspace
 api/http_requests/.env
 Procfile.dev
 rspec_diff.sh
+notes/
+.rspec
