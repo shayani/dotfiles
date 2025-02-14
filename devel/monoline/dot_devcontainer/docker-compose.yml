@@ -4,7 +4,7 @@ x-app: &backend-app
     - DATABASE_HOST=db
     - DATABASE_USERNAME=postgres
     - DATABASE_PASSWORD=postgres
-    - EDITOR=code --wait
+    - EDITOR=vim
     - RAILS_ENV=development
     - REDIS_URL=redis://redis:6379
     - PARALLEL_TEST_PROCESSORS=5
