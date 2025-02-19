@@ -29,6 +29,10 @@ dconf write /org/gnome/desktop/wm/preferences/num-workspaces "4"
 # dconf write /org/gnome/shell/keybindings/switch-to-application-9 "['<Alt>9']"
 
 # # Use super for workspaces
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-1 "['<Shift><Super>1']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-2 "['<Shift><Super>2']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-3 "['<Shift><Super>3']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-4 "['<Shift><Super>4']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-3 "['<Super>3']"

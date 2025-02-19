@@ -46,7 +46,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - postgres:/var/lib/postgresql/data
-    mem_limit: 128M
+    mem_limit: 512M
 
   redis:
     image: redis:6.2.5
@@ -59,7 +59,7 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
       PGADMIN_DEFAULT_PASSWORD: postgres
-    mem_limit: 384M
+    # mem_limit: 1G
     depends_on:
       - db
 
