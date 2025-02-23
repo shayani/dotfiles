@@ -53,3 +53,10 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-4 "['<Super>4'
 # dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name "'Flameshot'"
 # dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command "'sh -c -- \"flameshot gui\"'"
 # dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding "'<Control>Print'"
+
+# Extensões
+echo "Extensões úteis"
+echo "Caffeine - https://github.com/eonpatapon/gnome-shell-extension-caffeine"
+echo "Clipboard Indicator - https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator"
+echo "Notification Banner Reloaded - https://github.com/marcinjakubowski/notification-position-reloaded"
+echo "App Icons Taskbar - https://gitlab.com/AndrewZaech/aztaskbar"
