@@ -12,10 +12,7 @@
 		},
 		"[jsonc]": {
 			"editor.defaultFormatter": "vscode.json-language-features"
-		},
-		"[erb]": {
-			"editor.defaultFormatter": "aliariff.vscode-erb-beautify"
-		},
+		}
 	},
 	"tasks": {
 		"version": "2.0.0",

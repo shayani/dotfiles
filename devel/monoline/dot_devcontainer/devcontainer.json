@@ -46,7 +46,7 @@
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	"runServices": [
 		"web-app",
-		"sidekiq",
+		// "sidekiq",
 		"db",
 		"redis"
 	],

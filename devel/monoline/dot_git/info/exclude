@@ -12,3 +12,4 @@ Procfile.dev
 rspec_diff.sh
 notes/
 .rspec
+until_fail.sh
