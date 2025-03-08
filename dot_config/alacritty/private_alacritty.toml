@@ -14,3 +14,9 @@ bold = { family = "Cascadia Code NF", style = "Bold" }
 italic = { family = "Cascadia Code NF", style = "Italic" }
 bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
 size = 10.0
+
+[terminal]
+
+[terminal.shell]
+program = "/home/shayani/scripts/tmux-attach-or-new.sh"
+
