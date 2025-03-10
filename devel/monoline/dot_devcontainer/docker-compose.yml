@@ -19,7 +19,7 @@ services:
       dockerfile: ./Dockerfile.dev
     volumes:
       - ../:/monoline:delegated
-      - ~/.ssh:/root/.ssh:ro
+      - ~/.ssh/id_ed25519:/root/.ssh/id_ed25519:ro
       - ~/.config:/root/.config
     command: sleep infinity
     tty: true
