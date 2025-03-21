@@ -7,3 +7,9 @@ Host bahai
   HostName svr3.bahai.org.br
   User root
   Port 2205
+
+Host srv4.bahai.org.br
+  HostName srv4.bahai.org.br
+  User shayani
+  Port 2205
+
