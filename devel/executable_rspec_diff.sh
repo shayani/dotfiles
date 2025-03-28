@@ -16,6 +16,6 @@ echo "List of changed spec files:"
 echo "$changed_specs"
 
 # Run rspec with all changed specs
-bundle exec rspec  $changed_specs
+bundle exec rspec --format progress $changed_specs
 
 echo "RSpec tests completed for changed _spec.rb files."
