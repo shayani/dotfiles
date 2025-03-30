@@ -99,5 +99,8 @@ alias lg="lazygit"
 alias ld="lazydocker"
 alias vim="nvim"
 
+<<<<<<< Updated upstream
 #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+=======
+>>>>>>> Stashed changes
