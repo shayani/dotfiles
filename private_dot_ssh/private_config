@@ -8,7 +8,7 @@ Host bahai
   User root
   Port 2205
 
-Host srv4.bahai.org.br
+Host srv4
   HostName srv4.bahai.org.br
   User shayani
   Port 2205
