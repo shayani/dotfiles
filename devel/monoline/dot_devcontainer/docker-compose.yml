@@ -64,5 +64,14 @@ services:
     depends_on:
       - db
 
+  selenium:
+    image: selenium/standalone-chromium
+    environment:
+      - SE_VNC_NO_PASSWORD=1
+    ports:
+      - 7910:7900
+    shm_size: "2gb"
+    restart: unless-stopped
+
 volumes:
   postgres:
