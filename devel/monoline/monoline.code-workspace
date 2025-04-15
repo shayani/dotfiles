@@ -36,7 +36,7 @@
 			{
 				"label": "All specs in parallel",
 				"type": "shell",
-				"command": "WORKERS=2 bundle exec rake db:parallel:create db:parallel:purge db:parallel:prepare && bundle exec prspec --exclude-pattern '**/system/**' --fail-fast spec",
+				"command": "PARALLEL_TEST_PROCESSORS=6 bin/rake parallel:setup; PARALLEL_TEST_PROCESSORS=6 bin/rake parallel:spec",
 			}
 		]
 	},
