@@ -1,0 +1,77 @@
+x-app: &backend-app
+  environment:
+    - COMPOSE_PROJECT_NAME=monoline_devcontainer
+    - DATABASE_HOST=db
+    - DATABASE_USERNAME=postgres
+    - DATABASE_PASSWORD=postgres
+    - EDITOR=cursor --wait
+    - VISUAL=cursor --wait
+    - RAILS_ENV=development
+    - REDIS_URL=redis://redis:6379
+    - PARALLEL_TEST_PROCESSORS=5
+
+services:
+  web-app:
+    <<: *backend-app
+    image: monoline-dev
+    build:
+      context: ../
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ../:/monoline:delegated
+      - ~/.ssh/id_ed25519:/root/.ssh/id_ed25519:ro
+      - ~/.config:/root/.config
+    command: sleep infinity
+    tty: true
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+
+  sidekiq:
+    <<: *backend-app
+    image: monoline-dev
+    command: bundle exec sidekiq start
+    volumes:
+      - ../:/monoline
+    depends_on:
+      - db
+      - redis
+    mem_limit: 256M
+
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=monoline_webapp_development
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    mem_limit: 512M
+
+  redis:
+    image: redis:6.2.5
+    mem_limit: 64M
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    # mem_limit: 1G
+    depends_on:
+      - db
+
+  selenium:
+    image: selenium/standalone-chromium
+    environment:
+      - SE_VNC_NO_PASSWORD=1
+    ports:
+      - 7910:7900
+    shm_size: "2gb"
+    restart: unless-stopped
+
+volumes:
+  postgres:

@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Garantir que dependências necessárias estão instaladas
+      become: yes
+      apt:
+        name:
+          - build-essential
+          - curl
+          - file
+          - git
+        state: present
+
+    - name: Verificar se o Homebrew já está instalado
+      stat:
+        path: /home/linuxbrew/.linuxbrew/bin/brew
+      register: homebrew_installed
+
+    - name: Instalar Homebrew apenas se não estiver instalado
+      shell: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      when: homebrew_installed.stat.exists == false

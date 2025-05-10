@@ -1,0 +1,22 @@
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = { columns = 140, lines = 40 }
+
+[general]
+import = ["/home/shayani/.config/alacritty/dracula.toml"]
+
+[font]
+normal = { family = "Cascadia Code NF", style = "Light" }
+bold = { family = "Cascadia Code NF", style = "Bold" }
+italic = { family = "Cascadia Code NF", style = "Italic" }
+bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
+size = 10.0
+
+[terminal]
+
+[terminal.shell]
+program = "/home/shayani/scripts/tmux-attach-or-new.sh"
+

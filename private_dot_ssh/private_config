@@ -1,0 +1,15 @@
+Host shayani
+  HostName srv1.shayani.net
+  User shayani
+  Port 2205
+
+Host bahai
+  HostName svr3.bahai.org.br
+  User root
+  Port 2205
+
+Host srv4
+  HostName srv4.bahai.org.br
+  User shayani
+  Port 2205
+

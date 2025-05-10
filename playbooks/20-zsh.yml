@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+  vars:
+    oh_my_zsh_dir: "{{ ansible_env.HOME }}/.oh-my-zsh"
+    zsh_autosuggestions_dir: "{{ oh_my_zsh_dir }}/custom/plugins/zsh-autosuggestions"
+    zshrc_file: "{{ ansible_env.HOME }}/.zshrc"
+  tasks:
+    - name: Garantir que o Zsh está instalado
+      become: yes
+      dnf:
+        name: zsh
+        state: present
+
+    - name: Verificar se o Oh My Zsh já está instalado
+      stat:
+        path: "{{ oh_my_zsh_dir }}"
+      register: ohmyzsh_installed
+
+    - name: Instalar Oh My Zsh apenas se não estiver instalado
+      git:
+        repo: 'https://github.com/ohmyzsh/ohmyzsh.git'
+        dest: "{{ oh_my_zsh_dir }}"
+      when: ohmyzsh_installed.stat.exists == false
+
+    - name: Verificar se o plugin zsh-autosuggestions está instalado
+      stat:
+        path: "{{ zsh_autosuggestions_dir }}"
+      register: autosuggestions_installed
+
+    - name: Instalar o plugin zsh-autosuggestions
+      git:
+        repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+        dest: "{{ zsh_autosuggestions_dir }}"
+      when: autosuggestions_installed.stat.exists == false
+
+    - name: Configurar Zsh como shell padrão
+      become: yes
+      user:
+        name: "{{ ansible_env.USER }}"
+        shell: /bin/zsh
+      when: ansible_facts.user_shell != '/bin/zsh'
