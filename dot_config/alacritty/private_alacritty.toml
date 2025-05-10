@@ -17,6 +17,6 @@ size = 10.0
 
 [terminal]
 
-[terminal.shell]
-program = "/home/shayani/scripts/tmux-attach-or-new.sh"
+# [terminal.shell]
+# program = "/home/shayani/scripts/tmux-attach-or-new.sh"
 
