@@ -1,0 +1,322 @@
+@import "mocha.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: @base;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Workspaces */
+#workspaces {
+  margin: 0 4px;
+}w
+
+#workspaces button {
+  padding: 0 8px;
+  background-color: transparent;
+  color: @overlay0;
+  border-radius: 6px;
+  margin: 2px 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background-color: @surface0;
+  color: @text;
+}
+
+#workspaces button.active {
+  background-color: @mauve;
+  color: @base;
+}
+
+#workspaces button.focused {
+  background-color: @mauve;
+  color: @base;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @base;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: @base;
+    color: @red;
+  }
+}
+
+/* Modules */
+#mode,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#keyboard-state,
+#mpd,
+#custom-power,
+#power-profiles-daemon {
+  padding: 0 10px;
+  margin: 0 2px;
+  color: @text;
+  background-color: @surface0;
+  border-radius: 6px;
+}
+
+/* Window title */
+#window {
+  background-color: @surface0;
+  padding: 0 15px;
+  border-radius: 6px;
+  color: @text;
+  font-weight: 600;
+}
+
+/* Clock */
+#clock {
+  background-color: @blue;
+  color: @base;
+  font-weight: 600;
+}
+
+/* Battery */
+#battery {
+  background-color: @green;
+  color: @base;
+}
+
+#battery.charging {
+  background-color: @yellow;
+  color: @base;
+}
+
+#battery.warning:not(.charging) {
+  background-color: @peach;
+  color: @base;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @red;
+  color: @base;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+/* CPU */
+#cpu {
+  background-color: @lavender;
+  color: @base;
+}
+
+#cpu.warning {
+  background-color: @peach;
+  color: @base;
+}
+
+#cpu.critical {
+  background-color: @red;
+  color: @base;
+}
+
+/* Memory */
+#memory {
+  background-color: @sapphire;
+  color: @base;
+}
+
+#memory.warning {
+  background-color: @peach;
+  color: @base;
+}
+
+#memory.critical {
+  background-color: @red;
+  color: @base;
+}
+
+/* Temperature */
+#temperature {
+  background-color: @teal;
+  color: @base;
+}
+
+#temperature.critical {
+  background-color: @red;
+  color: @base;
+}
+
+/* Network */
+#network {
+  background-color: @pink;
+  color: @base;
+}
+
+#network.disconnected {
+  background-color: @overlay0;
+  color: @text;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+  background-color: @sky;
+  color: @base;
+}
+
+#pulseaudio.muted {
+  background-color: @overlay0;
+  color: @text;
+}
+
+/* Backlight */
+#backlight {
+  background-color: @yellow;
+  color: @base;
+}
+
+/* Idle Inhibitor */
+#idle_inhibitor {
+  background-color: @surface0;
+  color: @text;
+}
+
+#idle_inhibitor.activated {
+  background-color: @flamingo;
+  color: @base;
+}
+
+/* MPD */
+#mpd {
+  background-color: @rosewater;
+  color: @base;
+}
+
+#mpd.disconnected {
+  background-color: @overlay0;
+  color: @text;
+}
+
+#mpd.stopped {
+  background-color: @surface0;
+  color: @text;
+}
+
+#mpd.paused {
+  background-color: @overlay1;
+  color: @text;
+}
+
+/* Custom Media */
+#custom-media {
+  background-color: @mauve;
+  color: @base;
+}
+
+/* Tray */
+#tray {
+  background-color: @surface0;
+}
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @red;
+}
+
+/* Keyboard State */
+#keyboard-state {
+  background-color: @surface0;
+  color: @text;
+}
+
+#keyboard-state>label {
+  padding: 0 5px;
+}
+
+#keyboard-state>label.locked {
+  background-color: @green;
+  color: @base;
+  border-radius: 3px;
+}
+
+/* Scratchpad */
+#scratchpad {
+  background-color: @surface0;
+  color: @text;
+}
+
+#scratchpad.empty {
+  background-color: transparent;
+}
+
+/* Mode */
+#mode {
+  background-color: @red;
+  color: @base;
+  font-weight: bold;
+}
+
+/* Power Profiles Daemon */
+#power-profiles-daemon {
+  background-color: @peach;
+  color: @base;
+}
+
+#power-profiles-daemon.performance {
+  background-color: @red;
+  color: @base;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: @blue;
+  color: @base;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: @green;
+  color: @base;
+}
+
+/* Custom Power */
+#custom-power {
+  background-color: @red;
+  color: @base;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Tooltip */
+tooltip {
+  background-color: @surface0;
+  border: 1px solid @surface2;
+  border-radius: 6px;
+  color: @text;
+}
+
+tooltip label {
+  color: @text;
+}
