@@ -4,7 +4,6 @@ x-app: &backend-app
     - DATABASE_HOST=db
     - DATABASE_USERNAME=postgres
     - DATABASE_PASSWORD=postgres
-    - DISABLE_SPRING=1
     - EDITOR=cursor --wait
     - VISUAL=cursor --wait
     - RAILS_ENV=development

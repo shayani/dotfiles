@@ -13,3 +13,4 @@ rspec_diff.sh
 notes/
 .rspec
 until_fail.sh
+.vscode/launch.json
