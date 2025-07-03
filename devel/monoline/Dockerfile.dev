@@ -45,7 +45,7 @@ RUN sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)/" ~/.zshrc
 # Graphite
 RUN npm install -g @withgraphite/graphite-cli@stable
 
-RUN gem install yard
+RUN gem install yard htmlbeautifier herb
 
 # COPY . /usr/src/app
 # RUN chmod +x entrypoint.sh entrypoint_worker.sh

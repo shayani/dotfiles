@@ -32,7 +32,9 @@
 				"usernamehw.errorlens",
 				"Graphite.gti-vscode",
 				"manuelpuyol.erb-linter",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"marcoroth.herb-lsp",
+				"humao.rest-client"
 			]
 		}
 	},
