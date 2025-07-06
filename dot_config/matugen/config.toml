@@ -1,0 +1,7 @@
+[config]
+
+
+[templates.waybar]
+input_path = "~/.config/matugen/waybar_colors.css"
+output_path = "~/.config/waybar/matugen.css"
+post_hook = "killall -SIGUSR2 waybar"

@@ -1,17 +1,18 @@
-@import "mocha.css";
+/* @import "mocha.css"; */
+/* @import "green.css"; */
+@import "matugen.css";
 
 * {
   border: none;
   border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", monospace;
-  font-size: 13px;
-  font-weight: 500;
+  font-family: "Cascadia Code", "Noto Sans, Light", monospace;
+  font-size: 12px;
+  font-weight: 300;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: @base;
-  color: @text;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -22,26 +23,40 @@ window#waybar.hidden {
 
 /* Workspaces */
 #workspaces {
-  margin: 0 4px;
-}w
-
-#workspaces button {
-  padding: 0 8px;
-  background-color: transparent;
-  color: @overlay0;
-  border-radius: 6px;
-  margin: 2px 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-#workspaces button:hover {
-  background-color: @surface0;
+  background: transparent;
+  margin: 2px 1px 3px 1px;
+  padding: 0px 1px;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
   color: @text;
 }
 
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  color: @textDark;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+}
+
+#workspaces button:hover {
+  background-color: @secondary;
+}
+
 #workspaces button.active {
-  background-color: @mauve;
-  color: @base;
+  background-color: @primary;
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1.0;
+  color: @textDark;
 }
 
 #workspaces button.focused {
@@ -82,13 +97,13 @@ window#waybar.hidden {
   padding: 0 10px;
   margin: 0 2px;
   color: @text;
-  background-color: @surface0;
-  border-radius: 6px;
+  background-color: transparent;
+  border-radius: 5px;
 }
 
 /* Window title */
 #window {
-  background-color: @surface0;
+  background-color: transparent;
   padding: 0 15px;
   border-radius: 6px;
   color: @text;
@@ -97,8 +112,8 @@ window#waybar.hidden {
 
 /* Clock */
 #clock {
-  background-color: @blue;
-  color: @base;
+  background-color: transparent;
+  color: @primary;
   font-weight: 600;
 }
 
@@ -235,7 +250,7 @@ window#waybar.hidden {
 
 /* Tray */
 #tray {
-  background-color: @surface0;
+  background-color: transparent;
 }
 
 #tray>.passive {
@@ -319,4 +334,24 @@ tooltip {
 
 tooltip label {
   color: @text;
+}
+
+#taskbar {
+  background-color: transparent;
+  color: @text;
+  padding: 5px;
+}
+
+#taskbar button.active {
+  background-color: transparent;
+  border: 1px solid @surface2;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-change_wallpaper {
+  background-color: transparent;
+  color: @text;
+  font-size: 15px;
+  font-weight: bold;
 }

@@ -1,26 +1,26 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "position": "top", // "top", "bottom", "left", "right"
+    "height": 30,
+    "spacing": 2,
     "modules-left": [
-        "hyprland/workspaces",
+        "clock",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "custom/media"
+        "custom/media",
+        "wlr/taskbar",
+        "tray"
     ],
     "modules-center": [
+        "hyprland/workspaces",
         "sway/window"
     ],
     "modules-right": [
+        "bluetooth",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
@@ -28,11 +28,38 @@
         "keyboard-state",
         "sway/language",
         "battery",
-        "battery#bat2",
-        "clock",
-        "tray",
-        "custom/power"
+        "custom/change_wallpaper",
+        "power-profiles-daemon",
+        "custom/power",
+        "group/power"
     ],
+    "wlr/taskbar": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "close",
+        "on-scroll-up": "scroll-up",
+        "on-scroll-down": "scroll-down",
+        "tooltip-format": "{app}: {title}",
+        "tooltip": true
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        }
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "",
+        "tooltip-format": "Devices connected: {num_connections}",
+        "on-click": "GTK_THEME=Adwaita-dark blueberry"
+    },
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -106,8 +133,8 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
+        // "icon-size": 24,
+        "spacing": 5
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
@@ -129,13 +156,7 @@
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
+        "format": "{temperatureC}°C"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -173,9 +194,6 @@
             ""
         ]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -207,7 +225,7 @@
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -232,7 +250,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format": "⏻ ",
+        "format": "⏻",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
@@ -242,5 +260,23 @@
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
         }
+    },
+    "custom/change_wallpaper": {
+        "format": "Wallpaper ",
+        "tooltip": false,
+        "on-click": "~/scripts/change_wallpaper.sh"
+    },
+    "group/power": {
+        "format": "⏻",
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 0.3,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "power-profiles-daemon"
+        ]
     }
 }
