@@ -5,16 +5,18 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Cascadia Code", "Noto Sans, Light", monospace;
+  font-family: "Cascadia Code NF", "Noto Sans, Light", monospace;
   font-size: 12px;
   font-weight: 300;
   min-height: 0;
+  color: @inverse_primary;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: @background;
   transition-property: background-color;
   transition-duration: 0.5s;
+  opacity: 0.3;
 }
 
 window#waybar.hidden {
@@ -40,7 +42,7 @@ window#waybar.hidden {
   margin: 4px 3px;
   border-radius: 15px;
   border: 0px;
-  color: @textDark;
+  color: @on_primary;
   background-color: transparent;
   transition: all 0.3s ease-in-out;
   opacity: 0.4;
@@ -48,6 +50,7 @@ window#waybar.hidden {
 
 #workspaces button:hover {
   background-color: @secondary;
+  color: @inverse_primary;
 }
 
 #workspaces button.active {
@@ -56,7 +59,7 @@ window#waybar.hidden {
   min-width: 40px;
   transition: all 0.3s ease-in-out;
   opacity: 1.0;
-  color: @textDark;
+  color: @inverse_primary;
 }
 
 #workspaces button.focused {
@@ -96,7 +99,7 @@ window#waybar.hidden {
 #power-profiles-daemon {
   padding: 0 10px;
   margin: 0 2px;
-  color: @text;
+  color: @on_background;
   background-color: transparent;
   border-radius: 5px;
 }
@@ -113,95 +116,84 @@ window#waybar.hidden {
 /* Clock */
 #clock {
   background-color: transparent;
-  color: @primary;
+  color: @inverse_primary;
   font-weight: 600;
 }
 
 /* Battery */
 #battery {
   background-color: @green;
-  color: @base;
 }
 
 #battery.charging {
   background-color: @yellow;
-  color: @base;
 }
 
 #battery.warning:not(.charging) {
   background-color: @peach;
-  color: @base;
 }
 
 #battery.critical:not(.charging) {
   background-color: @red;
-  color: @base;
   animation: blink 0.5s linear infinite alternate;
 }
 
 /* CPU */
 #cpu {
-  background-color: @lavender;
-  color: @base;
+  /* color: @secondary; */
 }
 
 #cpu.warning {
   background-color: @peach;
-  color: @base;
+  color: @inverse_primary;
 }
 
 #cpu.critical {
   background-color: @red;
-  color: @base;
+  color: @inverse_primary;
 }
 
 /* Memory */
 #memory {
   background-color: @sapphire;
-  color: @base;
 }
 
 #memory.warning {
-  background-color: @peach;
-  color: @base;
+  background-color: @on_error;
+  color: @inverse_primary;
 }
 
 #memory.critical {
   background-color: @red;
-  color: @base;
+  color: @inverse_primary;
 }
 
 /* Temperature */
 #temperature {
-  background-color: @teal;
-  color: @base;
+  /* background-color: @teal; */
 }
 
 #temperature.critical {
   background-color: @red;
-  color: @base;
+  color: @inverse_primary;
 }
 
 /* Network */
 #network {
   background-color: @pink;
-  color: @base;
 }
 
 #network.disconnected {
   background-color: @overlay0;
-  color: @text;
 }
 
 /* Pulseaudio */
 #pulseaudio {
   background-color: @sky;
-  color: @base;
 }
 
 #pulseaudio.muted {
   background-color: @overlay0;
-  color: @text;
 }
 
 /* Backlight */
@@ -213,39 +205,33 @@ window#waybar.hidden {
 /* Idle Inhibitor */
 #idle_inhibitor {
   background-color: @surface0;
-  color: @text;
 }
 
 #idle_inhibitor.activated {
   background-color: @flamingo;
-  color: @base;
 }
 
 /* MPD */
 #mpd {
   background-color: @rosewater;
-  color: @base;
 }
 
 #mpd.disconnected {
   background-color: @overlay0;
-  color: @text;
 }
 
 #mpd.stopped {
   background-color: @surface0;
-  color: @text;
 }
 
 #mpd.paused {
   background-color: @overlay1;
-  color: @text;
 }
 
 /* Custom Media */
 #custom-media {
   background-color: @mauve;
-  color: @base;
+  color: @inverse_primary;
 }
 
 /* Tray */
@@ -274,7 +260,7 @@ window#waybar.hidden {
 
 #keyboard-state>label.locked {
   background-color: @green;
-  color: @base;
+  color: @inverse_primary;
   border-radius: 3px;
 }
 
@@ -298,28 +284,24 @@ window#waybar.hidden {
 /* Power Profiles Daemon */
 #power-profiles-daemon {
   background-color: @peach;
-  color: @base;
 }
 
 #power-profiles-daemon.performance {
   background-color: @red;
-  color: @base;
 }
 
 #power-profiles-daemon.balanced {
   background-color: @blue;
-  color: @base;
 }
 
 #power-profiles-daemon.power-saver {
   background-color: @green;
-  color: @base;
 }
 
 /* Custom Power */
 #custom-power {
   background-color: @red;
-  color: @base;
+  color: @inverse_primary;
   font-size: 15px;
   font-weight: bold;
 }
@@ -354,4 +336,10 @@ tooltip label {
   color: @text;
   font-size: 15px;
   font-weight: bold;
+}
+
+#group-system {
+  border-radius: 15px;
+  padding: 0px;
+  margin: 0px;
 }

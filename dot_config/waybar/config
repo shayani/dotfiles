@@ -13,6 +13,7 @@
     ],
     "modules-center": [
         "hyprland/workspaces",
+        "group/group-system",
         "sway/window"
     ],
     "modules-right": [
@@ -21,15 +22,11 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "cpu",
-        "memory",
-        "temperature",
         "backlight",
         "keyboard-state",
         "sway/language",
         "battery",
         "custom/change_wallpaper",
-        "power-profiles-daemon",
         "custom/power",
         "group/power"
     ],
@@ -252,19 +249,21 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+        "on-click": "hyprlock"
     },
     "custom/change_wallpaper": {
         "format": "Wallpaper ",
         "tooltip": false,
         "on-click": "~/scripts/change_wallpaper.sh"
+    },
+    "group/group-system": {
+        "orientation": "inherit",
+        "modules": [
+            "power-profiles-daemon",
+            "cpu",
+            "memory",
+            "temperature"
+        ]
     },
     "group/power": {
         "format": "⏻",
