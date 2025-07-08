@@ -8,5 +8,5 @@ NEW_WALLPAPER=$(ls $WALLPAPER_DIR | shuf -n 1)
 
 # Apply wallpaper
 hyprctl hyprpaper reload ,"$WALLPAPER_DIR/$NEW_WALLPAPER"
-matugen image --type scheme-expressive "$WALLPAPER_DIR/$NEW_WALLPAPER"
+matugen image --type scheme-fruit-salad "$WALLPAPER_DIR/$NEW_WALLPAPER"
 

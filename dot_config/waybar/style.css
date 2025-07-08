@@ -16,7 +16,7 @@ window#waybar {
   background-color: @background;
   transition-property: background-color;
   transition-duration: 0.5s;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 window#waybar.hidden {
@@ -173,8 +173,13 @@ window#waybar.hidden {
   /* background-color: @teal; */
 }
 
+#temperature.warning {
+  background-color: yellow;
+  color: @inverse_primary;
+}
+
 #temperature.critical {
-  background-color: @red;
+  background-color: red;
   color: @inverse_primary;
 }
 
@@ -326,9 +331,6 @@ tooltip label {
 
 #taskbar button.active {
   background-color: transparent;
-  border: 1px solid @surface2;
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
 }
 
 #custom-change_wallpaper {
