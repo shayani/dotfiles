@@ -5,11 +5,7 @@
 # *.[oa]
 # *~
 Dockerfile.dev
-monoline.code-workspace
-.devcontainer/
 api/http_requests/.env
-Procfile.dev
-rspec_diff.sh
 notes/
 .rspec
 until_fail.sh
