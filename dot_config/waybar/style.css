@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
   opacity: 0.7;
@@ -25,7 +25,7 @@ window#waybar.hidden {
 
 /* Workspaces */
 #workspaces {
-  background: transparent;
+  background: @background;
   margin: 2px 1px 3px 1px;
   padding: 0px 1px;
   border-radius: 15px;
@@ -43,9 +43,7 @@ window#waybar.hidden {
   border-radius: 15px;
   border: 0px;
   color: @on_primary;
-  background-color: transparent;
   transition: all 0.3s ease-in-out;
-  opacity: 0.4;
 }
 
 #workspaces button:hover {
@@ -115,9 +113,12 @@ window#waybar.hidden {
 
 /* Clock */
 #clock {
-  background-color: transparent;
-  color: @inverse_primary;
+  background-color: @background;
+  color: @text;
   font-weight: 600;
+  border-radius: 15px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 /* Battery */
