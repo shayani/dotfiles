@@ -3,7 +3,9 @@
 # Check if the OS is Arch Linux
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
-  paru -Syu git zsh fontconfig btop tmux tldr unzip wget zsh fish neovim \
+  paru -Syu --needed \
+	  git zsh fontconfig btop tmux tldr unzip wget zsh fish neovim \
+    github-cli \
     ncdu \
     mtr \
     zoxide
