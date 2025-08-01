@@ -11,3 +11,4 @@ notes/
 until_fail.sh
 .vscode/launch.json
 .cursor/mcp.json
+.devcontainer/docker-compose-personal-settings.override.yml
