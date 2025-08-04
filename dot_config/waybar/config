@@ -42,7 +42,10 @@
     },
     "hyprland/workspaces": {
         "on-click": "activate",
-        "format": "{icon}"
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "1": []
+        }
     },
     "bluetooth": {
         "format": "",
