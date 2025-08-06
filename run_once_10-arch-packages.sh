@@ -9,7 +9,14 @@ if [[ -f /etc/arch-release ]]; then
 	  fish \
 	  fontconfig \
 	  git \
+		impala \
 	  neovim \
+		slurp \
+		wl-screenrec \
+		wiremix \
+		satty \
+		swayosd \
+		ttf-cascadia-mono-nerd \
 	  tldr \
 	  tmux \
 	  unzip \
