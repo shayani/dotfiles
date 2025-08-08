@@ -3,10 +3,10 @@ if status is-interactive
     # Alias
     alias ld='lazydocker'
     alias lg='lazygit'
+    alias gemini='npx @google/gemini-cli'
 
     # Zoxide
     zoxide init fish | source
 end
 
 set -gx PATH $HOME/.local/bin $PATH
-

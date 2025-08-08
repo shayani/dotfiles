@@ -4,32 +4,33 @@
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
   paru -Syu --noconfirm --needed \
+    blueman \
+    bluetui \
     btop \
     fd \
+    ffmpegthumbnailer \
     fish \
     fontconfig \
     git \
+    gnome-keyring \
     impala \
-    neovim \
-    slurp \
-    wl-screenrec \
-    wiremix \
-    satty \
-    swayosd \
-    ttf-cascadia-mono-nerd \
-    tldr \
-    tmux \
-    unzip \
-    wget \
-    zsh \
-    zsh \
-    ffmpegthumbnailer \
+    lazydocker-bin \
+    lazygit \
     mtr \
     ncdu \
+    neovim \
+    satty \
+    slurp \
+    swayosd \
+    tldr \
+    tmux \
+    ttf-cascadia-mono-nerd \
+    unzip \
     walker-bin \
-    bluetui \
-    blueman \
-    lazygit \
-    lazydocker-bin \
+    wget \
+    wiremix \
+    wl-screenrec \
+    zsh \
+    zsh \
     zoxide
 fi
