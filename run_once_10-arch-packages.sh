@@ -16,6 +16,7 @@ if [[ -f /etc/arch-release ]]; then
     impala \
     lazydocker-bin \
     lazygit \
+    libgnome-keyring \
     mtr \
     ncdu \
     neovim \
@@ -25,6 +26,7 @@ if [[ -f /etc/arch-release ]]; then
     tldr \
     tmux \
     ttf-cascadia-mono-nerd \
+    ttf-jetbrains-mono-nerd \
     unzip \
     walker-bin \
     wget \
