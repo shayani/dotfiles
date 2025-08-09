@@ -29,10 +29,16 @@ if [[ -f /etc/arch-release ]]; then
     ttf-jetbrains-mono-nerd \
     unzip \
     walker-bin \
+    uwsm \
     wget \
     wiremix \
     wl-screenrec \
     zsh \
-    zsh \
     zoxide
+
+  # pacotes necessarios para screen sharing no Hyprland
+  paru -S --noconfirm --needed \
+    pipewire \
+    wireplumber \
+    xdg-desktop-portal-hyprland
 fi
