@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Gera um menu com o Walker
 menu() {
   local prompt="$1"
   local options="$2"
@@ -19,6 +20,12 @@ menu() {
   echo -e "$options" | walker --dmenu -p "$prompt…" "${args[@]}"
 }
 
+show_screenshot_menu() {
+  case "$(menu "Screenshot" "󰸨  Area")" in
+    *Area*) ~/scripts/screenshot.sh ;;
+  esac
+}
+
 show_system_menu() {
 	case "$(menu "System" "  Lock\n󰤄  Suspend\n  Kill\n󰜉  Reboot\n󰐥  Shutdown")" in
 		*Lock*) pidof hyprlock || hyprlock ;;
@@ -32,7 +39,7 @@ show_system_menu() {
 
 show_main_menu() {
   # go_to_menu "$(menu "Go" "󰀻  Apps\n󰧑  Learn\n  Capture\n󰔎  Toggle\n  Style\n  Setup\n󰉉  Install\n󰭌  Remove\n  Update\n  About\n  System")"
-  go_to_menu "$(menu "Go" "  System")"
+  go_to_menu "$(menu "Go" "󰸨  Screenshot\n  System")"
 }
 
 go_to_menu() {
