@@ -7,5 +7,6 @@ if [[ -f /etc/arch-release ]]; then
 	  visual-studio-code-bin \
 	  cursor-bin \
 	  cursor-cli \
+	  todoist-bin \
 	  google-chrome
 fi
