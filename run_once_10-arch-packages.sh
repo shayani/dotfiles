@@ -10,6 +10,8 @@ if [[ -f /etc/arch-release ]]; then
     fd \
     ffmpegthumbnailer \
     fish \
+    fzf \
+    fd \
     fontconfig \
     git \
     gnome-keyring \
