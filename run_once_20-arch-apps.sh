@@ -8,5 +8,6 @@ if [[ -f /etc/arch-release ]]; then
 	  cursor-bin \
 	  cursor-cli \
 	  todoist-bin \
+	  postman-bin \
 	  google-chrome
 fi
