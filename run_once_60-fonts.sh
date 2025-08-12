@@ -5,7 +5,7 @@ echo "Installing fonts"
 echo "======================"
 
 if [[ ! -f /etc/arch-release ]]; then
-  echo "System is not Arch, installing fonts"
+  echo "Debian"
   mkdir -p ~/.local/share/fonts
 
   # JetBrains Mono Nerd Font
@@ -25,5 +25,7 @@ if [[ ! -f /etc/arch-release ]]; then
 
   fc-cache -f -v
 else
-  echo "System is Arch, skipping font installation"
+  echo "Arch"
+
+  paru -S --noconfirm --needed ttf-font-awesome ttf-cascadia-mono-nerd ttf-ia-writer noto-fonts noto-fonts-emoji ttf-jetbrains-mono noto-fonts-cjk noto-fonts-extra
 fi
