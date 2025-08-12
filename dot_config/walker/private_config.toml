@@ -1,4 +1,4 @@
-app_launch_prefix = "uwsm app -- "
+app_launch_prefix = ""
 terminal_title_flag = ""
 locale = ""
 close_when_open = false
@@ -161,7 +161,7 @@ placeholder = "Custom Commands"
 
 [[builtins.custom_commands.entries]]
 label = "Wifi"
-exec = "uwsm app -- kitty -e nmtui"
+exec = "kitty -e nmtui"
 keywords = ["wifi", "nmtui", "network"]
 icon = "network-wireless"
 

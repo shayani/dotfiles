@@ -33,6 +33,7 @@ if [[ -f /etc/arch-release ]]; then
     unzip \
     walker-bin \
     uwsm \
+    libnewt \
     wget \
     wiremix \
     wl-screenrec \
