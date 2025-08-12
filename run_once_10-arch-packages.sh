@@ -22,6 +22,7 @@ if [[ -f /etc/arch-release ]]; then
     mtr \
     ncdu \
     neovim \
+    npm \
     satty \
     slurp \
     swayosd \
