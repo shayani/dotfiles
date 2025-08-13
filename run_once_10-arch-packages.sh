@@ -19,11 +19,13 @@ if [[ -f /etc/arch-release ]]; then
     lazydocker-bin \
     lazygit \
     libgnome-keyring \
+    libsecret \
     mtr \
     ncdu \
     neovim \
     npm \
     satty \
+    seahorse \
     slurp \
     swayosd \
     tldr \

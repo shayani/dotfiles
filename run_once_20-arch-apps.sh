@@ -10,4 +10,10 @@ if [[ -f /etc/arch-release ]]; then
 	  todoist-bin \
 	  postman-bin \
 	  google-chrome
+
+	# Docker
+  echo "Instalando Docker"
+	paru -S --noconfirm --needed docker docker-compose
+  sudo usermod -aG docker $USER
+  sudo systemctl enable docker.socket
 fi

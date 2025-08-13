@@ -1,0 +1,40 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "ctrl+k ctrl+g",
+        "command": "git-graph.view"
+    },
+    {
+        "key": "alt+tab alt+tab",
+        "command": "editor.cpp.toggle"
+    },
+    {
+        "key": "ctrl+y ctrl+y",
+        "command": "extension.runOnLastSpec",
+        "when": "editorLangId == 'ruby'"
+    },
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "extension.runLineOnRspec",
+        "when": "editorLangId == 'ruby'"
+    },
+    {
+        "key": "ctrl+t ctrl+t",
+        "command": "extension.runFileOnRspec",
+        "when": "editorLangId == 'ruby'"
+    },
+    {
+        "key": "ctrl+r ctrl+r",
+        "command": "extension.runOpenSpec",
+        "when": "editorLangId == 'ruby'"
+    },
+    {
+        "key": "ctrl+j ctrl+j",
+        "command": "editor.action.joinLines",
+        "when": "editorLangId == 'ruby'"
+    }
+]

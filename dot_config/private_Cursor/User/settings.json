@@ -1,0 +1,245 @@
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "diffEditor.codeLens": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'CaskaydiaMono Nerd Font', monospace",
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss19', 'ss20'",
+    "editor.fontSize": 14,
+    // "editor.fontWeight": 300,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "foreground": "#6c6c6c",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.class.ruby",
+                    "support.class.ruby"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.rulers": [
+        120
+    ],
+    "editor.stickyScroll.enabled": true,
+    "editor.tabSize": 2,
+    "explorer.fileNesting.enabled": true,
+    "files.associations": {
+        "*.html.erb": "erb",
+        "*.jbuilder": "ruby",
+        "*.axlsx": "ruby"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "git-graph.dialog.addTag.type": "Lightweight",
+    "git-graph.dialog.fetchRemote.prune": true,
+    "git-graph.dialog.fetchRemote.pruneTags": true,
+    "git-graph.repository.commits.showSignatureStatus": true,
+    "git-graph.repository.fetchAndPrune": true,
+    "git-graph.repository.sign.commits": true,
+    "git-graph.repository.sign.tags": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.ignoreRebaseWarning": true,
+    "git.mergeEditor": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "python": true,
+        "ruby": true,
+        "rust": false,
+        "yaml": false
+    },
+    "githubIssues.issueBranchTitle": "${issueNumber}-${sanitizedIssueTitle}",
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "githubPullRequests.createOnPublishBranch": "never",
+    "githubPullRequests.defaultMergeMethod": "squash",
+    "githubPullRequests.fileListLayout": "tree",
+    "githubPullRequests.pullBranch": "never",
+    "githubPullRequests.pushBranch": "always",
+    "gitlens.changes.locations": [
+        "gutter",
+        "overview"
+    ],
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "branch-create:command"
+    ],
+    "gitlens.heatmap.locations": [
+        "overview",
+        "gutter"
+    ],
+    "gitlens.sortBranchesBy": "name:asc",
+    "gitlens.views.branches.avatars": false,
+    "gitlens.views.branches.showBranchComparison": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.typographer": true,
+    "projectManager.git.baseFolders": [
+        "/home/shayani/devel"
+    ],
+    "ruby.specSaveFile": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.terminal.sizeToContentWidth"
+    ],
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.ignoreProcessNames": [
+        "oh-my-posh",
+        "bash",
+        "zsh"
+    ],
+    "terminal.integrated.localEchoLatencyThreshold": 300,
+    "terminal.integrated.fontWeight": 200,
+    "editor.guides.bracketPairs": "active",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "auto"
+    },
+    "rubyLsp.enabledFeatures": {
+        "codeActions": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true,
+        "definition": true,
+        "workspaceSymbol": true,
+        "signatureHelp": true,
+        "typeHierarchy": true
+    },
+    "git-graph.date.type": "Commit Date",
+    "editor.formatOnSave": true,
+    "diffEditor.renderSideBySide": false,
+    "workbench.editor.tabActionLocation": "left",
+    "settingsSync.ignoredSettings": [
+        "-window.zoomLevel"
+    ],
+    "remote.autoForwardPortsSource": "hybrid",
+    "git.replaceTagsWhenPull": true,
+    "vscode-erb-beautify.keepBlankLines": 1,
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "window.restoreWindows": "none",
+    "gitlens.views.commitDetails.files.layout": "list",
+    "rubyLsp.indexing": {
+        "includedPatterns": [
+            "**/spec/**.rb"
+        ]
+    },
+    "explorer.confirmDragAndDrop": false,
+    "projectManager.tags": [
+        "Personal",
+        "Work",
+        "SNSA",
+        "EventaServo",
+        "Monoline"
+    ],
+    "[erb]": {
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "settingsSync.ignoredExtensions": [
+        "42crunch.vscode-openapi",
+        "redocly.openapi-vs-code"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "[ruby]": {},
+    "gitlens.views.showRelativeDateMarkers": false,
+    "ruby.specCommand": "bin/rspec",
+    "tailwind-fold.autoFold": false,
+    "workbench.startupEditor": "none",
+    "Notes.notesLocation": "/monoline/notes",
+    "gitlens.views.scm.grouped.default": "searchAndCompare",
+    "gitlens.graph.layout": "editor",
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "repositories": false,
+        "searchAndCompare": true,
+        "launchpad": false
+    },
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "auto",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "githubPullRequests.experimental.chat": true,
+    "githubPullRequests.experimental.notificationsView": true,
+    "githubPullRequests.experimental.useQuickChat": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "tailwindCSS.colorDecorators": false,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4o",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "gitlens.views.searchAndCompare.files.layout": "tree",
+    "containers.containers.label": "Compose Project Name",
+    "cursor.cpp.disabledLanguages": [
+        "markdown",
+        "scminput",
+        "rust",
+        "yaml"
+    ],
+    "files.autoSave": "onFocusChange",
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.composer.shouldAllowCustomModes": true,
+    "workbench.colorTheme": "Default Light+",
+    "terminal.integrated.fontSize": 11
+}

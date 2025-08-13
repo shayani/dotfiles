@@ -5,7 +5,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Cascadia Code NF", "Noto Sans, Light", monospace;
+  font-family: "CaskaydiaMono Nerd Font", "JetBrainsMono Nerd Font", monospace;
   font-size: 12px;
   font-weight: 300;
   min-height: 0;
@@ -185,9 +185,7 @@ window#waybar.hidden {
 }
 
 /* Network */
-#network {
-  background-color: @pink;
-}
+#network {}
 
 #network.disconnected {
   background-color: @overlay0;
