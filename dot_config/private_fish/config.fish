@@ -10,3 +10,6 @@ if status is-interactive
 end
 
 set -gx PATH $HOME/.local/bin $PATH
+
+set -x VISUAL "code"
+set -x EDITOR "nvim"

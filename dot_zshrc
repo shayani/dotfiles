@@ -82,7 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='nvim'
+export EDITOR="nvim"
+export VISUAL="code"
+
 export TERM=xterm-256color
 
 # Compilation flags
@@ -100,6 +102,5 @@ alias lg="lazygit"
 alias ld="lazydocker"
 alias vim="nvim"
 
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(zoxide init zsh)"
-
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(zoxide init zsh)"
