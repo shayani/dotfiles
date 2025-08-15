@@ -312,9 +312,9 @@ window#waybar.hidden {
 
 /* Tooltip */
 tooltip {
-  background-color: @surface0;
+  background-color: @background;
   border: 1px solid @surface2;
-  border-radius: 6px;
+  border-radius: 5px;
   color: @text;
 }
 
@@ -336,4 +336,8 @@ tooltip label {
   border-radius: 15px;
   padding: 0px;
   margin: 0px;
+}
+
+#bluetooth {
+  color: @text;
 }
