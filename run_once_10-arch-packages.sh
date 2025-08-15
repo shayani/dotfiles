@@ -3,22 +3,23 @@
 # Check if the OS is Arch Linux
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
-  paru -Syu --noconfirm --needed \
+  paru -S --noconfirm --needed \
     blueman \
     bluetui \
     btop \
     fd \
     ffmpegthumbnailer \
     fish \
-    fzf \
-    fd \
     fontconfig \
+    fzf \
     git \
+    github-cli \
     gnome-keyring \
     impala \
     lazydocker-bin \
     lazygit \
     libgnome-keyring \
+    libnewt \
     libsecret \
     mtr \
     ncdu \
@@ -33,15 +34,14 @@ if [[ -f /etc/arch-release ]]; then
     ttf-cascadia-mono-nerd \
     ttf-jetbrains-mono-nerd \
     unzip \
-    walker-bin \
     uwsm \
-    libnewt \
-    wget \
+    walker-bin \
     wavemon \
+    wget \
     wiremix \
     wl-screenrec \
-    zsh \
-    zoxide
+    zoxide \
+    zsh
 
   # pacotes necessarios para screen sharing no Hyprland
   paru -S --noconfirm --needed \
