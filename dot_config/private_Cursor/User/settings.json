@@ -240,6 +240,6 @@
     "files.autoSave": "onFocusChange",
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.composer.shouldAllowCustomModes": true,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Dracula Theme",
     "terminal.integrated.fontSize": 11
 }
