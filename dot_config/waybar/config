@@ -233,11 +233,6 @@
         "tooltip": false,
         "on-click": "wlogout"
     },
-    "custom/change_wallpaper": {
-        "format": "Wallpaper ",
-        "tooltip": false,
-        "on-click": "~/scripts/change_wallpaper.sh"
-    },
     "group/group-system": {
         "orientation": "inherit",
         "modules": [

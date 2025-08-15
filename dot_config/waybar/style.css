@@ -332,13 +332,6 @@ tooltip label {
   background-color: transparent;
 }
 
-#custom-change_wallpaper {
-  background-color: transparent;
-  color: @text;
-  font-size: 15px;
-  font-weight: bold;
-}
-
 #group-system {
   border-radius: 15px;
   padding: 0px;
