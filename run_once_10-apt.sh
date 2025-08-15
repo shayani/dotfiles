@@ -8,6 +8,7 @@ if [[ -f /etc/arch-release ]]; then
     github-cli \
     ncdu \
     mtr \
+    wavemon \
     zoxide
 else
   # Update package list and install packages for Debian-based systems
@@ -28,6 +29,7 @@ else
     tmux \
     unzip \
     wget \
+    wavemon \
     zoxide \
     zsh
 fi

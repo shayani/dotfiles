@@ -37,6 +37,7 @@ if [[ -f /etc/arch-release ]]; then
     uwsm \
     libnewt \
     wget \
+    wavemon \
     wiremix \
     wl-screenrec \
     zsh \

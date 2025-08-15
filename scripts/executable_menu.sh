@@ -37,27 +37,50 @@ show_system_menu() {
 	esac
 }
 
+show_todoist_menu() {
+  case "$(menu "Todoist" "󰒻  Adicionar\n󰒼  Hoje")" in
+    *Adicionar*) new_todoist_task;;
+    *Hoje*) show_todoist_tasks ;;
+  esac
+}
+
+new_todoist_task() {
+  task="$(echo "" | dmenu -b -p "Nova tarefa: " <&-)" || exit 0
+  echo "$task"
+
+  /usr/bin/todoist q "$task" &
+
+  notify-send "Nova tarefa adicionada: $task"
+}
+
+show_todoist_tasks() {
+  tasks=$(/usr/bin/todoist list -f today | cut -d' ' -f7- | sort)
+  echo "$tasks" | walker --dmenu -p "Tarefas para hoje"
+}
+
 show_main_menu() {
   # go_to_menu "$(menu "Go" "󰀻  Apps\n󰧑  Learn\n  Capture\n󰔎  Toggle\n  Style\n  Setup\n󰉉  Install\n󰭌  Remove\n  Update\n  About\n  System")"
-  go_to_menu "$(menu "Go" "󰸨  Screenshot\n  System")"
+  go_to_menu "$(menu "Go" "  Todoist\n󰸨  Screenshot\n󰔎  Alterar modo\n  System")"
 }
 
 go_to_menu() {
   case "${1,,}" in
-  *apps*) walker -p "Launch…" ;;
-  *learn*) show_learn_menu ;;
-  *style*) show_style_menu ;;
-  *theme*) show_theme_menu ;;
-  *capture*) show_capture_menu ;;
-  *screenshot*) show_screenshot_menu ;;
-  *screenrecord*) show_screenrecord_menu ;;
-  *toggle*) show_toggle_menu ;;
-  *setup*) show_setup_menu ;;
-  *install*) show_install_menu ;;
-  *remove*) show_remove_menu ;;
-  *update*) show_update_menu ;;
-  *system*) show_system_menu ;;
-  *about*) gtk-launch About.desktop ;;
+  *apps*) walker -p "Launch…" ;; 
+  *learn*) show_learn_menu ;; 
+  *style*) show_style_menu ;; 
+  *theme*) show_theme_menu ;; 
+  *capture*) show_capture_menu ;; 
+  *screenshot*) show_screenshot_menu ;; 
+  *screenrecord*) show_screenrecord_menu ;; 
+  *toggle*) show_toggle_menu ;; 
+  *setup*) show_setup_menu ;; 
+  *install*) show_install_menu ;; 
+  *remove*) show_remove_menu ;; 
+  *update*) show_update_menu ;; 
+  *system*) show_system_menu ;; 
+  *todoist*) show_todoist_menu ;; 
+  *modo*) /home/shayani/scripts/toggle_theme.sh ;; 
+  *about*) gtk-launch About.desktop ;; 
   esac
 }
 
