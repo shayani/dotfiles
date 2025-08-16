@@ -4,6 +4,7 @@ if status is-interactive
     alias ld='lazydocker'
     alias lg='lazygit'
     alias gemini='npx @google/gemini-cli'
+    alias gemini-flash='npx @google/gemini-cli -m gemini-2.5-flash'
 
     # Zoxide
     zoxide init fish | source
