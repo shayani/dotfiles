@@ -15,6 +15,8 @@ if [ -z "$RUNNING_CONTAINERS" ]; then
   exit 0
 fi
 
+notify-send "Parando todos os containers em execução..."
+
 for container_id in $RUNNING_CONTAINERS; do
   container_name=$(docker inspect --format='{{.Name}}' "$container_id" | sed 's,^/,,g')
   echo -n "Stopping container: $container_name..."
@@ -28,3 +30,4 @@ for container_id in $RUNNING_CONTAINERS; do
 done
 
 echo "All done."
+notify-send "Todos os containers em execução foram parados"
