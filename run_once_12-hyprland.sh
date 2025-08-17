@@ -11,7 +11,7 @@ if [[ -f /etc/arch-release ]]; then
 	  waybar \
 	  hyprshot \
 	  hyprlock \
-	  swaync \
+	  mako \
 	  xdg-desktop-portal-hyprland \
 	  hyprpolkitagent \
 	  matugen-bin
