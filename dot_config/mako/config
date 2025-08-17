@@ -1,28 +1,26 @@
-sort=-time
-layer=overlay
-background-color=#2e3440
-width=300
-height=110
-border-size=2
-border-color=#88c0d0
-border-radius=15
-icons=0
-max-icon-size=64
+anchor=top-right
+
+background-color=#1a1b26
+border-color=#33ccff
+border-size=1
+border-radius=5
 default-timeout=5000
-ignore-timeout=1
-font=monospace 14
+font=CaskaydiaMono Nerd Font 11
+height=200
+width=420
+text-color=#a9b1d6
+outer-margin=20
+padding=10
 
-[urgency=low]
-border-color=#cccccc
+max-icon-size=32
+sort=-time
 
-[urgency=normal]
-border-color=#d08770
 
-[urgency=high]
-border-color=#bf616a
-default-timeout=0
+[app-name=Spotify]
+invisible=1
 
-[category=mpd]
-default-timeout=2000
-group-by=category
+[mode=do-not-disturb]
+invisible=true
 
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
