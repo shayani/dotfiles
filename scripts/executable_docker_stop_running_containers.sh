@@ -11,6 +11,7 @@ RUNNING_CONTAINERS=$(docker ps -q)
 
 if [ -z "$RUNNING_CONTAINERS" ]; then
   echo "No running containers to stop."
+  notify-send "Não há containers em execução"
   exit 0
 fi
 
@@ -19,8 +20,10 @@ for container_id in $RUNNING_CONTAINERS; do
   echo -n "Stopping container: $container_name..."
   if docker stop "$container_id" > /dev/null; then
     echo -e " [${GREEN}CHECK${NC}]"
+    notify-send "Container $container_name parado"
   else
     echo -e " [${RED}FAIL${NC}]"
+    notify-send "Erro ao parar o container $container_name"
   fi
 done
 
