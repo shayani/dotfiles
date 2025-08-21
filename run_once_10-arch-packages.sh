@@ -7,6 +7,7 @@ if [[ -f /etc/arch-release ]]; then
     blueman \
     bluetui \
     btop \
+    dmenu \
     fd \
     ffmpegthumbnailer \
     fish \
@@ -25,6 +26,7 @@ if [[ -f /etc/arch-release ]]; then
     ncdu \
     neovim \
     npm \
+    pulsemixer \
     satty \
     seahorse \
     slurp \
