@@ -23,13 +23,8 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
         "battery",
-        "custom/change_wallpaper",
-        "custom/power",
-        "group/power"
+        "custom/power"
     ],
     "wlr/taskbar": {
         "all-outputs": true,
@@ -187,9 +182,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({frequency}GHz {signalStrength}%) ",
+        "format-wifi": "{frequency}GHz {signalStrength}% ",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format": "{essid} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
@@ -215,7 +210,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "kitty -e pulsemixer"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -250,19 +245,6 @@
             "cpu",
             "memory",
             "temperature"
-        ]
-    },
-    "group/power": {
-        "format": "⏻",
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 0.3,
-            "children-class": "not-power",
-            "transition-left-to-right": false
-        },
-        "modules": [
-            "custom/power",
-            "power-profiles-daemon"
         ]
     }
 }

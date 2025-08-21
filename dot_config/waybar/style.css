@@ -4,7 +4,7 @@
 
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 5px;
   font-family: "CaskaydiaMono Nerd Font", "JetBrainsMono Nerd Font", monospace;
   font-size: 12px;
   font-weight: 300;
@@ -28,7 +28,7 @@ window#waybar.hidden {
   background: @background;
   margin: 2px 1px 3px 1px;
   padding: 0px 1px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 0px;
   font-weight: bold;
   font-style: normal;
@@ -40,7 +40,7 @@ window#waybar.hidden {
 #workspaces button {
   padding: 0px 5px;
   margin: 4px 3px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 0px;
   color: @on_primary;
   transition: all 0.3s ease-in-out;
@@ -53,7 +53,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   background-color: @primary;
-  border-radius: 15px;
+  border-radius: 5px;
   min-width: 40px;
   transition: all 0.3s ease-in-out;
   opacity: 1.0;
@@ -94,6 +94,7 @@ window#waybar.hidden {
 #keyboard-state,
 #mpd,
 #custom-power,
+#custom-docker,
 #power-profiles-daemon {
   padding: 0 10px;
   margin: 0 2px;
@@ -116,7 +117,7 @@ window#waybar.hidden {
   background-color: @background;
   color: @text;
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 5px;
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -303,12 +304,7 @@ window#waybar.hidden {
 }
 
 /* Custom Power */
-#custom-power {
-  background-color: @red;
-  color: @inverse_primary;
-  font-size: 15px;
-  font-weight: bold;
-}
+#custom-power {}
 
 /* Tooltip */
 tooltip {
