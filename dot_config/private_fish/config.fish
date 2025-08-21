@@ -12,5 +12,5 @@ end
 
 set -gx PATH $HOME/.local/bin $PATH
 
-set -x VISUAL "code"
-set -x EDITOR "nvim"
+set -x VISUAL nvim
+set -x EDITOR nvim
