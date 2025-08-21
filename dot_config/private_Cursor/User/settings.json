@@ -6,7 +6,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "diffEditor.codeLens": true,
-    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'CaskaydiaMono Nerd Font', monospace",
+    "editor.fontFamily": "'CaskaydiaMono Nerd Font Propo', 'JetBrainsMono Nerd Font', monospace",
     "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss19', 'ss20'",
     "editor.fontSize": 14,
     // "editor.fontWeight": 300,
