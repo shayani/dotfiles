@@ -14,3 +14,4 @@ set -gx PATH $HOME/.local/bin $PATH
 
 set -x VISUAL nvim
 set -x EDITOR nvim
+/usr/bin/mise activate fish | source
