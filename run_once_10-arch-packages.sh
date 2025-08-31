@@ -22,10 +22,12 @@ if [[ -f /etc/arch-release ]]; then
     libgnome-keyring \
     libnewt \
     libsecret \
+    mise \
     mtr \
     ncdu \
     neovim \
     npm \
+    postgresql-libs \
     pulsemixer \
     satty \
     seahorse \
@@ -38,6 +40,7 @@ if [[ -f /etc/arch-release ]]; then
     unzip \
     uwsm \
     walker-bin \
+    watchman-bin \
     wavemon \
     wget \
     wiremix \

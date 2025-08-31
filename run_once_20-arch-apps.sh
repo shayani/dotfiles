@@ -4,16 +4,16 @@
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
   paru -Syu --noconfirm --needed \
-	  visual-studio-code-bin \
-	  cursor-bin \
-	  cursor-cli \
-	  todoist-bin \
-	  postman-bin \
-	  google-chrome
+    visual-studio-code-bin \
+    cursor-bin \
+    cursor-cli \
+    todoist-bin \
+    postman-bin \
+    google-chrome
 
-	# Docker
+  # Docker
   echo "Instalando Docker"
-	paru -S --noconfirm --needed docker docker-compose
+  paru -S --noconfirm --needed docker docker-compose docker-buildx
   sudo usermod -aG docker $USER
   sudo systemctl enable docker.socket
 fi
