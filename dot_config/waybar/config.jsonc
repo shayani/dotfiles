@@ -156,7 +156,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󱊥",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -187,7 +187,7 @@
         "tooltip-format": "{essid} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "kitty -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -244,7 +244,18 @@
             "power-profiles-daemon",
             "cpu",
             "memory",
-            "temperature"
+            "temperature",
+            "load",
+            "custom/uptime"
         ]
+    },
+    "load": {
+        "format": "{load1}/{load5}/{load15}"
+    },
+    "custom/uptime": {
+        "format": "Uptime: {}",
+        "exec": "uptime | awk '{print $3, $4, $5}' | sed 's/,$//'",
+        "interval": 5
     }
+}
 }
