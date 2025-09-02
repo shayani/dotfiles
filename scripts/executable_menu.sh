@@ -22,25 +22,25 @@ menu() {
 
 show_screenshot_menu() {
   case "$(menu "Screenshot" "󰸨  Area")" in
-    *Area*) ~/scripts/screenshot.sh ;;
+  *Area*) ~/scripts/screenshot.sh ;;
   esac
 }
 
 show_system_menu() {
-	case "$(menu "System" "  Lock\n󰤄  Suspend\n  Kill\n󰜉  Reboot\n󰐥  Shutdown")" in
-		*Lock*) pidof hyprlock || hyprlock ;;
-		*Suspend*) systemctl suspend ;;
-		*Kill*) ps -u $USER -o pid,comm,%cpu,%mem | walker --dmenu -p Kill: | awk '{print $1}' | xargs -r kill ;;
-		*Reboot*) systemctl reboot ;;
-		*Shutdown*) systemctl poweroff ;;
-		*) show_main_menu ;;
-	esac
+  case "$(menu "System" "  Lock\n󰤄  Suspend\n  Kill\n󰜉  Reboot\n󰐥  Shutdown")" in
+  *Lock*) pidof hyprlock || hyprlock ;;
+  *Suspend*) systemctl suspend ;;
+  *Kill*) ps -u $USER -o pid,comm,%cpu,%mem | walker --dmenu -p Kill: | awk '{print $1}' | xargs -r kill ;;
+  *Reboot*) systemctl reboot ;;
+  *Shutdown*) systemctl poweroff ;;
+  *) show_main_menu ;;
+  esac
 }
 
 show_todoist_menu() {
   case "$(menu "Todoist" "󰒻  Adicionar\n󰒼  Hoje")" in
-    *Adicionar*) new_todoist_task;;
-    *Hoje*) show_todoist_tasks ;;
+  *Adicionar*) new_todoist_task ;;
+  *Hoje*) show_todoist_tasks ;;
   esac
 }
 
@@ -57,7 +57,7 @@ show_todoist_tasks() {
 }
 
 show_main_menu() {
-  go_to_menu "$(menu "Go" "  Todoist\n󰸨  Screenshot\n󰔎  Alterar modo\n󰸉  Wallpaper\n󰐥  System")"
+  go_to_menu "$(menu "Go" "  Todoist\n󰸨  Screenshot\n󰔎  Dark Mode\n󰸉  Wallpaper\n󰐥  System")"
 }
 
 go_to_menu() {
@@ -76,7 +76,7 @@ go_to_menu() {
   *update*) show_update_menu ;;
   *system*) show_system_menu ;;
   *todoist*) show_todoist_menu ;;
-  *modo*) /home/shayani/scripts/toggle_theme.sh ;;
+  *mode*) /home/shayani/scripts/toggle_theme.sh ;;
   *wallpaper*) /home/shayani/scripts/change_wallpaper.sh ;;
   *about*) gtk-launch About.desktop ;;
   esac

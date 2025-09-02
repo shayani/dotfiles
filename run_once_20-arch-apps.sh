@@ -3,7 +3,7 @@
 # Check if the OS is Arch Linux
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
-  paru -Syu --noconfirm --needed \
+  paru -S --noconfirm --needed \
     visual-studio-code-bin \
     cursor-bin \
     cursor-cli \
