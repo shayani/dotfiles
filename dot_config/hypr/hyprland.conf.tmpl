@@ -34,22 +34,6 @@ source = ~/.config/hypr/workspaces.conf
 env = XCURSOR_SIZE,24
 env = HYPRCURSOR_SIZE,24
 
-{{ if or (eq .chezmoi.hostname "goku") (contains .chezmoi.hostname "dell") }}
-# Configuração para NVIDIA
-env = LIBVA_DRIVER_NAME,nvidia
-env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-env = NVD_BACKEND,direct
-env = LIBVA_DRIVER_NAME,nvidia
-env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-env = NVD_BACKEND,direct
-env = GBM_BACKEND,nvidia-drm
-env = MOZ_ENABLE_WAYLAND,1
-env = __GL_MaxFramesAllowed,1
-env = __GL_VRR_ALLOWED,0
-env = PROTON_ENABLE_NGX_UPDATER,1
-env = VDPAU_DRIVER,nvidia
-{{ end }}
-
 ###################
 ### PERMISSIONS ###
 ###################

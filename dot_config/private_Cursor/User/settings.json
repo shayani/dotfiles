@@ -129,7 +129,8 @@
         "zsh"
     ],
     "terminal.integrated.localEchoLatencyThreshold": 300,
-    "terminal.integrated.fontWeight": 200,
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontWeight": 400,
     "editor.guides.bracketPairs": "active",
     "diffEditor.ignoreTrimWhitespace": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -240,6 +241,5 @@
     "files.autoSave": "onFocusChange",
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.composer.shouldAllowCustomModes": true,
-    "workbench.colorTheme": "Dracula Theme",
-    "terminal.integrated.fontSize": 11
+    "workbench.colorTheme": "Dracula Theme"
 }
