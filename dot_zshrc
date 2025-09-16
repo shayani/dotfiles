@@ -88,6 +88,7 @@ export VISUAL="nvim"
 export TERM=xterm-256color
 export PARALLEL_TEST_MULTIPLY_PROCESSES=0.8
 export REDIS_URL=redis://localhost:6379
+export DISABLE_SPRING=1
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
