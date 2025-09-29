@@ -1,8 +1,7 @@
 services:
   postgres:
     image: postgres:17
-    ports:
-      - "5432:5432"
+    network_mode: "host"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -11,8 +10,7 @@ services:
 
   redis:
     image: redis:7
-    ports:
-      - "6379:6379"
+    network_mode: "host"
 
 volumes:
   pg_data:
