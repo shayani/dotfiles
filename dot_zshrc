@@ -110,3 +110,7 @@ alias gemini-flash='npx @google/gemini-cli -m gemini-2.5-flash'
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # eval "$(zoxide init zsh)"
 eval "$(mise activate zsh)"
+
+# Disable Docker BuildKit
+export DOCKER_BUILDKIT=0
+export COMPOSE_DOCKER_CLI_BUILD=0
