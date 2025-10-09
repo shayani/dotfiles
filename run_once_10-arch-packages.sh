@@ -4,6 +4,8 @@
 if [[ -f /etc/arch-release ]]; then
   echo "Using Arch"
   paru -S --noconfirm --needed \
+    bluez \
+    bluez-utils \
     blueman \
     bluetui \
     btop \
