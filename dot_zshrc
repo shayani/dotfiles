@@ -114,3 +114,10 @@ eval "$(mise activate zsh)"
 # Disable Docker BuildKit
 export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
+
+# Added by Gemini for PostgreSQL extension
+export POSTGRES_HOST=localhost
+export POSTGRES_PORT=5432
+export POSTGRES_DATABASE=postgres
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=postgres
