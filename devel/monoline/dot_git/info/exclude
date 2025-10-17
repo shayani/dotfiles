@@ -13,3 +13,4 @@ until_fail.sh
 .cursor/mcp.json
 .devcontainer/docker-compose-personal-settings.override.yml
 spec/rails_helper.rb
+config/initializers/ssl_config.rb
