@@ -230,12 +230,12 @@
     },
     "custom/docker": {
         "format": " {}",
-        "exec": "$HOME/scripts/docker_running_contains_count.sh",
+        "exec": "$HOME/sync/scripts/docker_running_contains_count.sh",
         "interval": 120,
         "tooltip": true,
         "tooltip-format": "Containers em execução: {}",
         "on-click": "kitty -e lazydocker",
-        "on-click-right": "/bin/bash -c $HOME/scripts/docker_stop_running_containers.sh"
+        "on-click-right": "/bin/bash -c $HOME/sync/scripts/docker_stop_running_containers.sh"
     },
     "group/group-system": {
         "orientation": "inherit",
