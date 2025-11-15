@@ -1,3 +1,7 @@
 {
-  "selectedAuthType": "oauth-personal"
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
 }
