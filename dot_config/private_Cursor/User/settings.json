@@ -238,5 +238,14 @@
     "files.autoSave": "onFocusChange",
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.composer.shouldAllowCustomModes": true,
-    "workbench.colorTheme": "Dracula Theme"
+    "workbench.colorTheme": "Dracula Theme",
+    "languageServerHerb.formatter.maxLineLength": 120,
+    "languageServerHerb.linter.fixOnSave": false,
+    "workbench.activityBar.orientation": "vertical",
+    "claudeCode.preferredLocation": "panel",
+    "vscode-run-rspec-file.custom-command": "bin/rspec",
+    "[css]": {
+        "editor.defaultFormatter": "marcoroth.herb-lsp",
+    },
+    "cursor.composer.usageSummaryDisplay": "always"
 }
