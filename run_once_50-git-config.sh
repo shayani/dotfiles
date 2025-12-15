@@ -1,5 +1,4 @@
-#!/usr/bin/zsh
-
+#!/bin/sh
 echo "______________________"
 echo "Configuring Git"
 echo "======================"

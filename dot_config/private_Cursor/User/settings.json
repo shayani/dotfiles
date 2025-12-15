@@ -108,7 +108,7 @@
     "markdown.preview.fontSize": 16,
     "markdown.preview.typographer": true,
     "projectManager.git.baseFolders": [
-        "/home/shayani/devel"
+        "~/devel"
     ],
     "ruby.specSaveFile": true,
     "security.workspace.trust.untrustedFiles": "open",
