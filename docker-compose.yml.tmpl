@@ -1,0 +1,32 @@
+---
+name: pessoal
+services:
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing
+    hostname: my-syncthing
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - STGUIADDRESS=0.0.0.0:8384
+      - STHOMEDIR=/var/syncthing-config
+    volumes:
+      - ~/sync:/var/syncthing
+      - ~/syncthing-config:/var/syncthing-config
+    ports:
+      - "8384:8384"      # GUI web interface
+      - "22000:22000/tcp"  # TCP sync protocol
+      - "22000:22000/udp"  # QUIC sync protocol
+      - "21027:21027/udp"  # Local discovery
+    restart: unless-stopped
+    healthcheck:
+      test: curl -fkLsS -m 2 http://127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+
+  uptime-kuma-agent:
+    image: curlimages/curl:latest
+    container_name: uptime-kuma-agent
+    command: sh -c "while true; do curl -s -o /dev/null '{{ .kuma_push_url }}'; sleep 60; done"
+    restart: unless-stopped

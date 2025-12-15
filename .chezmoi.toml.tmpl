@@ -2,3 +2,12 @@ encryption = "age"
 [age]
     identity = "~/.config/chezmoi/key.txt"
     recipient = "age1jnw5nm99eftzeqdkzsfks9q704kxxqgf44r3vckvcfdgake8q4zs0lk3uq"
+
+[data]
+{{- if contains "MacBook" .chezmoi.hostname }}
+    kuma_push_url = "https://kuma.shayani.net/api/push/QRsDqbLvuQC8ObBeOeor1qCl0jx8lxQ6?status=up&msg=OK&ping="
+{{- else if contains "book3" .chezmoi.hostname }}
+    kuma_push_url = "https://kuma.shayani.net/api/push/7yWbUaEWp2MJZE3Gzqhg3OI6JklXohkc?status=up&msg=OK&ping="
+{{- else }}
+    kuma_push_url = ""
+{{- end }}
