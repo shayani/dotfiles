@@ -1,0 +1,18 @@
+[Unit]
+Description=Serviço Syncthing (Quadlet)
+
+[Container]
+Image=docker.io/syncthing/syncthing
+ContainerName=syncthing
+UserNS=keep-id
+PodmanArgs=--hostname=my-syncthing
+Environment=PUID=1000 PGID=1000 STGUIADDRESS=0.0.0.0:8384
+# Volume Bind (Pasta de Sync)
+Volume=/var/home/shayani/sync:/var/syncthing:Z
+# Volume Nomeado (Configurações)
+Volume=syncthing-config:/var/syncthing/config
+Network=host
+
+[Install]
+# Faz o container iniciar automaticamente no boot do usuário
+WantedBy=default.target
