@@ -11,7 +11,7 @@ services:
       - STGUIADDRESS=0.0.0.0:8384
     volumes:
       - ~/sync:/var/syncthing
-      - syncthing-config:/var/syncthing/config
+#      - syncthing-config:/var/syncthing/config
     ports:
       - "8384:8384"      # GUI web interface
       - "22000:22000/tcp"  # TCP sync protocol
