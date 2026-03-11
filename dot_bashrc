@@ -1,0 +1,2 @@
+# Shared exports (POSIX compatible)
+[ -f ~/.profile ] && source ~/.profile

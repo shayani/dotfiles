@@ -1,0 +1,26 @@
+anchor=top-right
+
+background-color=#1a1b26
+border-color=#33ccff
+border-size=1
+border-radius=5
+default-timeout=3000
+font=Arial, CaskaydiaMono Nerd Font 11
+height=200
+width=420
+text-color=#a9b1d6
+outer-margin=20
+padding=10
+
+max-icon-size=32
+sort=-time
+
+
+[app-name=Spotify]
+invisible=1
+
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false

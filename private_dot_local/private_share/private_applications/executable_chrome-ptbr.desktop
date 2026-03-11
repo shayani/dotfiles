@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Google Chrome (pt-BR)
+Comment=Navegador Google Chrome em Português (Brasil)
+Exec=LANG=pt_BR /usr/bin/google-chrome-stable %U
+Terminal=false
+Type=Application
+Icon=google-chrome
+Categories=Network;WebBrowser;
+StartupWMClass=Google-chrome

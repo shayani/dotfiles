@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Alacritty
+Comment=A fast, cross-platform, OpenGL terminal emulator
+Exec=~/.cargo/bin/alacritty
+Icon=~/.local/share/icons/alacritty.svg
+Terminal=false
+Type=Application
+Categories=System;TerminalEmulator;
