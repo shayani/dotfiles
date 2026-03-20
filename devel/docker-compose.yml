@@ -1,14 +1,25 @@
 services:
-  postgres:
-    image: postgres:17
-    ports:
-      - "5432:5432"
+  pg15:
+    image: postgres:15
+    # ports:
+    #   - "5433:5432"
     # network_mode: "host"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-      - pg_data:/var/lib/postgresql/data
+      - pg15_data:/var/lib/postgresql/data
+
+  pg18:
+    image: postgres:18
+    # ports:
+      # - "5432:5432"
+    environment:
+      - POSTGRES_DB=monoline_webapp_development
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pg18_data:/var/lib/postgresql
 
   redis:
     image: redis:7
@@ -25,5 +36,6 @@ services:
   #     PGADMIN_DEFAULT_PASSWORD: postgres
 
 volumes:
-  pg_data:
+  pg15_data:
+  pg18_data:
 
