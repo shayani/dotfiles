@@ -15,3 +15,4 @@ until_fail.sh
 spec/rails_helper.rb
 config/initializers/ssl_config.rb
 app/views/layouts/_debug.html.erb
+.worktrees
