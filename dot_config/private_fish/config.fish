@@ -12,3 +12,7 @@ set -gx PATH $HOME/.local/bin $PATH
 
 # Load shared environment variables
 load_env
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

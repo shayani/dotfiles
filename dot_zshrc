@@ -114,3 +114,4 @@ compinit
 # opencode
 export PATH=~/.opencode/bin:$PATH
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
