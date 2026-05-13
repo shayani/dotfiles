@@ -187,3 +187,7 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
     if.app-id = 'com.gizmolabs.openwhispr'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.tomito.tomito'
+    run = 'layout floating'
