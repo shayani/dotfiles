@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "ollama/gemma4:e2b",
+  "model": "opencode/big-pickle",
   "provider": {
     "ollama": {
       "models": {
