@@ -38,6 +38,11 @@
       "headers": {
         "Authorization": "Bearer {file:~/.config/opencode/.secrets/github-pat}"
       }
+    },
+    "sentry": {
+      "type": "remote",
+      "url": "https://mcp.sentry.dev/mcp",
+      "enabled": true
     }
   }
 }
