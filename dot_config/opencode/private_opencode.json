@@ -17,11 +17,6 @@
     }
   },
   "mcp": {
-    "shortcut": {
-      "type": "remote",
-      "url": "https://mcp.shortcut.com/mcp",
-      "enabled": true
-    },
     "kontilo": {
       "type": "remote",
       "url": "https://kontilo.shayani.net/mcp",
@@ -38,11 +33,6 @@
       "headers": {
         "Authorization": "Bearer {file:~/.config/opencode/.secrets/github-pat}"
       }
-    },
-    "sentry": {
-      "type": "remote",
-      "url": "https://mcp.sentry.dev/mcp",
-      "enabled": true
     }
   }
 }
