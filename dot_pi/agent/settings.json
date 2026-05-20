@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.75.3",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "steeringMode": "all",
+  "transport": "auto",
+  "compaction": {
+    "enabled": true
+  }
+}
