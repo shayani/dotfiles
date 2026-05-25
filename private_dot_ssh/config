@@ -1,0 +1,16 @@
+Include /Users/shayani/.colima/ssh_config
+
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+Host srv2
+    HostName srv2.shayani.net
+    User shayani
+    Port 2205
+
+Host srv4
+    HostName srv4.bahai.org.br
+    User shayani
+    Port 2205
