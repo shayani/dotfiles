@@ -24,11 +24,6 @@
         "Authorization": "Bearer {file:~/.config/opencode/.secrets/kontilo-pat}"
       },
       "enabled": true
-    },
-    "notion": {
-      "type": "remote",
-      "url": "https://mcp.notion.com/mcp",
-      "enabled": true
     }
   }
 }
