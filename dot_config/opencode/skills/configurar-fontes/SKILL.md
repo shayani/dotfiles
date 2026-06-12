@@ -88,8 +88,8 @@ config.font_size = 12
 {
   "editor.fontFamily": "'Cascadia Code NF', 'JetBrainsMono Nerd Font', monospace",
   "editor.fontWeight": "300",
-  "editor.fontSize": 12,
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss19', 'ss20'",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": "'calt', 'liga'",
   "terminal.integrated.fontFamily": "'Cascadia Code NF'",
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.fontSize": 12
@@ -98,6 +98,17 @@ config.font_size = 12
 
 - VSCode: `~/Library/Application Support/Code/User/settings.json`
 - Cursor: `~/Library/Application Support/Cursor/User/settings.json`
+
+## Ajustes para monitores não-Retina (82 PPI)
+
+Para monitores como o Samsung Odyssey G30 (27" 1080p, ~82 PPI):
+
+- **Hinting**: `hintslight` é o ponto ideal. Para mais definição, `hintfull`.
+- **Tamanhos**: terminal 12, editor 14 — ajustar conforme preferência.
+- Ligaduras específicas de cada fonte (ex: `ss01`, `ss19` da Cascadia) podem
+  não funcionar em outras fontes. Prefira `'calt', 'liga'` como padrão.
+- No macOS o hinting é controlado pelo CoreText, não exposto nas configs
+  dos apps. As configurações de hinting se aplicam a Linux/Windows.
 
 Ambos podem ser gerenciados pelo chezmoi.
 
@@ -115,3 +126,14 @@ Para adicionar um arquivo ao chezmoi:
 ```bash
 chezmoi add ~/.config/wezterm/wezterm.lua
 ```
+
+## Fontes favoritas do usuário
+
+1. **SpaceMono Nerd Font** — atual, aprovada
+2. **Cascadia Code NF** — usou por um bom tempo
+3. **JetBrainsMono Nerd Font** — pré-existente, reserva
+4. **Monofur Nerd Font** — testou, curtiu o estilo único
+
+Preferências consolidadas: Regular 400, tamanho 12 em todos os apps.
+Samsung Odyssey G30 (27" 1080p, ~82 PPI).
+
