@@ -1,261 +1,96 @@
-// -*- mode: jsonc -*-
 {
-    "position": "top", // "top", "bottom", "left", "right"
+    "layer": "top",
+    "position": "top",
     "height": 30,
-    "spacing": 2,
-    "modules-left": [
-        "clock",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media",
-        "wlr/taskbar",
-        "tray"
-    ],
-    "modules-center": [
-        "hyprland/workspaces",
-        "group/group-system",
-        "custom/docker",
-        "sway/window"
-    ],
-    "modules-right": [
-        "bluetooth",
-        "mpd",
-        "pulseaudio",
-        "network",
-        "battery",
-        "custom/power"
-    ],
-    "wlr/taskbar": {
-        "all-outputs": true,
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-right": "close",
-        "on-scroll-up": "scroll-up",
-        "on-scroll-down": "scroll-down",
-        "tooltip-format": "{app}: {title}",
-        "tooltip": true
-    },
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "cpu", "memory", "battery", "power-profiles-daemon", "tray"],
+
     "hyprland/workspaces": {
-        "on-click": "activate",
-        "format": "{icon}",
-        "show-special": true,
-        "persistent-workspaces": {
-            "1": []
-        }
-    },
-    "bluetooth": {
-        "format": "",
-        "format-disabled": "󰂲",
-        "format-connected": "{num_connections}",
-        "tooltip-format": "Devices connected: {num_connections}",
-        "on-click": "GTK_THEME=Adwaita-dark blueman-manager"
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
+        "format": "{name}:{icon}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         }
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        // "icon-size": 24,
-        "spacing": 5
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
-    },
+
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d/%m %H:%M}"
+        "format": "{:%H:%M - %d/%b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": false,
-        "on-click": "kitty -e btop"
-    },
-    "memory": {
-        "format": " {}%"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 90,
-        "format": " {temperatureC}°C"
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󱊥",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "on-click": "pavucontrol"
     },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "kitty nmtui"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "tooltip-format": "Bluetooth: {controller_alias}\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "kitty bluetui"
+    },
+
+    "cpu": {
+        "format": " {usage}%"
+    },
+
+    "memory": {
+        "format": "\uf1c0 {}%"
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "format-charging": "\uf0e7 {capacity}%",
+        "format-plugged": "\uf0e7 {capacity}%",
+        "states": {
+            "critical": 15,
+            "warning": 25
+        }
+    },
+
     "power-profiles-daemon": {
         "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
         "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        }
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{frequency}GHz {signalStrength}% ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{essid} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
-        "on-click": "kitty -e nmtui"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "󰖁 {icon} {format_source}",
-        "format-muted": "󰖁 {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "󰋋",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
+            "default": "\uf0e7",
+            "performance": "\uf0e7",
+            "balanced": "\uf2db",
+            "power-saver": "\uf2e8"
         },
-        "on-click": "kitty -e pulsemixer"
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}"
     },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power": {
-        "format": "⏻",
-        "tooltip": false,
-        "on-click": "wlogout"
-    },
-    "custom/docker": {
-        "format": " {}",
-        "exec": "$HOME/sync/scripts/docker_running_contains_count.sh",
-        "interval": 120,
-        "tooltip": true,
-        "tooltip-format": "Containers em execução: {}",
-        "on-click": "kitty -e lazydocker",
-        "on-click-right": "/bin/bash -c $HOME/sync/scripts/docker_stop_running_containers.sh"
-    },
-    "group/group-system": {
-        "orientation": "inherit",
-        "modules": [
-            "power-profiles-daemon",
-            "idle_inhibitor",
-            "cpu",
-            "memory",
-            "temperature",
-            "load",
-            "custom/uptime"
-        ]
-    },
-    "load": {
-        "format": "{load1}/{load5}/{load15}"
-    },
-    "custom/uptime": {
-        "format": "Uptime: {}",
-        "exec": "uptime | awk '{print $3, $4, $5}' | sed 's/,$//'",
-        "interval": 60
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
     }
-}
 }
