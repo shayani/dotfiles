@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.75.3",
+  "lastChangelogVersion": "0.80.3",
   "defaultProvider": "opencode-go",
   "defaultModel": "deepseek-v4-flash",
   "defaultThinkingLevel": "high",
@@ -7,5 +7,6 @@
   "transport": "auto",
   "compaction": {
     "enabled": true
-  }
+  },
+  "theme": "dark"
 }
