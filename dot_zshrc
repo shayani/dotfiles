@@ -104,7 +104,7 @@ alias gemini-flash='npx @google/gemini-cli -m gemini-2.5-flash'
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # eval "$(zoxide init zsh)"
-eval "$(mise activate zsh)"
+#eval "$(mise activate zsh)"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/shayani/.docker/completions $fpath)
 autoload -Uz compinit
