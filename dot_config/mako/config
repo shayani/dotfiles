@@ -1,20 +1,24 @@
 anchor=top-right
 
-background-color=#1a1b26
-border-color=#33ccff
-border-size=1
-border-radius=5
-default-timeout=3000
-font=Arial, CaskaydiaMono Nerd Font 11
+# Cores Nord
+background-color=#2E3440
+text-color=#D8DEE9
+border-color=#81A1C1
+border-size=2
+border-radius=8
+
+default-timeout=5000
+font=JetBrainsMono Nerd Font 10
+width=350
 height=200
-width=420
-text-color=#a9b1d6
+padding=12
 outer-margin=20
-padding=10
 
 max-icon-size=32
 sort=-time
-
+icons=1
+group-by=app-name
+max-visible=5
 
 [app-name=Spotify]
 invisible=1
