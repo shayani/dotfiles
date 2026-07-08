@@ -63,9 +63,9 @@ env = HYPRCURSOR_SIZE,24
 # windowrule = float,class:^(kitty)$,title:^(kitty)$
 
 # Ignore maximize requests from apps. You'll probably like this.
-windowrule = suppressevent maximize, class:.*
+window-rule = suppressevent maximize, class:.*
 
 # Fix some dragging issues with XWayland
-windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+window-rule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
 
-layerrule = noanim, walker
+layer-rule = noanim, walker
