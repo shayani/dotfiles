@@ -1,2 +1,8 @@
 # Shared exports (POSIX compatible)
 [ -f ~/.profile ] && source ~/.profile
+
+# opencode
+export PATH=/home/shayani/.opencode/bin:$PATH
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"
