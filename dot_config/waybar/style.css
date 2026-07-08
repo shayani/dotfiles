@@ -92,7 +92,6 @@ window#waybar.hidden {
 #mpd,
 #custom-power,
 #custom-docker,
-#custom-uptime,
 #group-system,
 #power-profiles-daemon {
   padding: 0 10px;
@@ -123,19 +122,19 @@ window#waybar.hidden {
 
 /* Battery */
 #battery {
-  background-color: @green;
+  color: @text;
 }
 
 #battery.charging {
-  background-color: @yellow;
+  color: @yellow;
 }
 
 #battery.warning:not(.charging) {
-  background-color: @peach;
+  color: @peach;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @red;
+  color: @red;
   animation: blink 0.5s linear infinite alternate;
 }
 
@@ -156,17 +155,15 @@ window#waybar.hidden {
 
 /* Memory */
 #memory {
-  background-color: @sapphire;
+  color: @text;
 }
 
 #memory.warning {
-  background-color: @on_error;
-  color: @inverse_primary;
+  color: @on_error;
 }
 
 #memory.critical {
-  background-color: @red;
-  color: @inverse_primary;
+  color: @red;
 }
 
 /* Temperature */
@@ -196,11 +193,11 @@ window#waybar.hidden {
 
 /* Pulseaudio */
 #pulseaudio {
-  background-color: @sky;
+  color: @text;
 }
 
 #pulseaudio.muted {
-  background-color: @overlay0;
+  color: @overlay0;
 }
 
 /* Backlight */
@@ -211,11 +208,11 @@ window#waybar.hidden {
 
 /* Idle Inhibitor */
 #idle_inhibitor {
-  background-color: @surface0;
+  color: @text;
 }
 
 #idle_inhibitor.activated {
-  background-color: @flamingo;
+  color: @flamingo;
 }
 
 /* MPD */
@@ -290,19 +287,19 @@ window#waybar.hidden {
 
 /* Power Profiles Daemon */
 #power-profiles-daemon {
-  background-color: @peach;
+  color: @text;
 }
 
 #power-profiles-daemon.performance {
-  background-color: @red;
+  color: @red;
 }
 
 #power-profiles-daemon.balanced {
-  background-color: @blue;
+  color: @blue;
 }
 
 #power-profiles-daemon.power-saver {
-  background-color: @green;
+  color: @green;
 }
 
 /* Custom Power */
