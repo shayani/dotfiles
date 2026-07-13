@@ -1,12 +1,15 @@
 {
-  "lastChangelogVersion": "0.80.3",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "deepseek-v4-flash",
+  "lastChangelogVersion": "0.80.6",
+  "defaultProvider": "omniroute",
+  "defaultModel": "auto/chat",
   "defaultThinkingLevel": "high",
   "steeringMode": "all",
   "transport": "auto",
   "compaction": {
     "enabled": true
   },
-  "theme": "dark"
+  "theme": "dark",
+  "packages": [
+    "npm:better-custom"
+  ]
 }
