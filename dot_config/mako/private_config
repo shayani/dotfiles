@@ -9,7 +9,7 @@ border-size=2
 border-radius=5
 
 default-timeout=5000
-font=JetBrainsMono Nerd Font 12
+font=Liberation Sans 12
 width=400
 height=240
 padding=14
