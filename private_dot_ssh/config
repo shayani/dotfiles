@@ -14,3 +14,13 @@ Host srv4
     HostName srv4.bahai.org.br
     User shayani
     Port 2205
+
+Host eventaservo
+    HostName srv1.eventaservo.org
+    User eventaservo
+    Port 2205
+
+Host home1
+    HostName home1.eland-neon.ts.net
+    User shayani
+    Port 22
