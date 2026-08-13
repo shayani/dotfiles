@@ -2,7 +2,6 @@
 # After that, you can edit ~/.aerospace.toml to your liking
 
 # Config version for compatibility and deprecations
-# Fallback value (if you omit the key): config-version = 1
 config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
@@ -16,7 +15,6 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-# See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
 accordion-padding = 30
@@ -33,7 +31,6 @@ default-root-container-orientation = 'auto'
 # Drop it from your config, if you don't like this behavior
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
-# Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
@@ -49,6 +46,11 @@ persistent-workspaces = [
   "1",
   "2",
   "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
   "9",
 ]
 
@@ -119,6 +121,7 @@ alt-shift-f = 'fullscreen'
 # Toggle floating/tiling
 alt-shift-space = 'layout floating tiling'
 
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
 alt-j = 'focus down'
@@ -161,6 +164,7 @@ alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
@@ -176,12 +180,14 @@ f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-#s = ['layout sticky tiling', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# App detection rules (on-window-detected)
+# These are the configurations that decide how AeroSpace handles a new window.
 
 [[on-window-detected]]
     if.app-id = 'com.gizmolabs.openwhispr'
@@ -190,7 +196,6 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
     if.app-id = 'com.tomito.tomito'
     run = 'layout floating'
-
 
 [[on-window-detected]]
     if.app-id = 'com.todoist.mac.Todoist'
@@ -207,6 +212,10 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
     if.app-id = 'com.apple.systempreferences'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating' # Finder agora é ignorado
 
 [[on-window-detected]]
     if.app-id = 'net.whatsapp.WhatsApp'
