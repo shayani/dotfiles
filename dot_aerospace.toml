@@ -220,3 +220,7 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
     if.app-id = 'net.whatsapp.WhatsApp'
     run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+    if.app-id = 'com.1password.1password'
+    run = 'layout floating'
