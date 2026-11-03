@@ -1,6 +1,10 @@
 key.txt.age
 .env
 
+# Estado específico de cada máquina
+.gemini/installation_id
+.config/microsoft-edge/Default/HubApps
+
 # macOS-only
 {{ if ne .chezmoi.os "darwin" }}
 .aerospace.toml
