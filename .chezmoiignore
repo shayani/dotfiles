@@ -22,5 +22,5 @@ key.txt.age
 .config/wofi
 .local/share/applications
 .local/share/icons
-scripts/arch
+scripts
 {{ end }}
