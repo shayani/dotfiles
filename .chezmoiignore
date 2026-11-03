@@ -1,2 +1,26 @@
 key.txt.age
 .env
+
+# macOS-only
+{{ if ne .chezmoi.os "darwin" }}
+.aerospace.toml
+{{ end }}
+
+# Linux-only (Wayland/X11)
+{{ if ne .chezmoi.os "linux" }}
+.XCompose
+.config/hypr
+.config/i3
+.config/mako
+.config/matugen
+.config/solaar
+.config/sway
+.config/swayosd
+.config/walker
+.config/waybar
+.config/wlogout
+.config/wofi
+.local/share/applications
+.local/share/icons
+scripts/arch
+{{ end }}
