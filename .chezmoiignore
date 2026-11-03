@@ -3,7 +3,6 @@ key.txt.age
 
 # Estado específico de cada máquina
 .gemini/installation_id
-.config/microsoft-edge/Default/HubApps
 
 # macOS-only
 {{ if ne .chezmoi.os "darwin" }}
