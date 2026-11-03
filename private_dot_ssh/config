@@ -24,3 +24,19 @@ Host home1
     HostName home1.eland-neon.ts.net
     User shayani
     Port 22
+
+Host home2
+    HostName home2.eland-neon.ts.net
+    User shayani
+    Port 22
+
+Match all
+  Include ~/.ssh/codespaces
+
+Host codespace
+    HostName cs.congenial-winner-pj45p5p4q63qg9.main
+    User vscode
+    IdentityFile ~/.ssh/codespaces.auto
+    ProxyCommand /opt/homebrew/bin/gh cs ssh -c congenial-winner-pj45p5p4q63qg9 --stdio -- -i /Users/shayani/.ssh/codespaces.auto
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
