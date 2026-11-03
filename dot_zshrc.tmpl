@@ -106,15 +106,17 @@ alias gemini-flash='npx @google/gemini-cli -m gemini-2.5-flash'
 # eval "$(zoxide init zsh)"
 #eval "$(mise activate zsh)"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/shayani/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
 # opencode
 export PATH=~/.opencode/bin:$PATH
+{{- if eq .chezmoi.os "darwin" }}
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+{{- end }}
 
 # carregar variáveis locais de ~/.env (nunca comitar este arquivo!)
 if [ -f "$HOME/.env" ]; then

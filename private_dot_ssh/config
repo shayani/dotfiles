@@ -1,4 +1,4 @@
-Include /Users/shayani/.colima/ssh_config
+Include ~/.colima/ssh_config
 
 # Added by OrbStack: 'orb' SSH host for Linux machines
 # This only works if it's at the top of ssh_config (before any Host blocks).
@@ -37,6 +37,6 @@ Host codespace
     HostName cs.congenial-winner-pj45p5p4q63qg9.main
     User vscode
     IdentityFile ~/.ssh/codespaces.auto
-    ProxyCommand /opt/homebrew/bin/gh cs ssh -c congenial-winner-pj45p5p4q63qg9 --stdio -- -i /Users/shayani/.ssh/codespaces.auto
+    ProxyCommand gh cs ssh -c congenial-winner-pj45p5p4q63qg9 --stdio -- -i ~/.ssh/codespaces.auto
     UserKnownHostsFile /dev/null
     StrictHostKeyChecking no
