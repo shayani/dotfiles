@@ -1,0 +1,25 @@
+{
+  "compaction": {
+    "enabled": true
+  },
+  "defaultModel": "granite4.2:3b",
+  "defaultProjectTrust": "always",
+  "defaultProvider": "ollama",
+  "defaultThinkingLevel": "medium",
+  "enableInstallTelemetry": false,
+  "lastChangelogVersion": "1.5.0",
+  "modelThinkingLevels": {
+    "omniroute/f-padrao": "medium"
+  },
+  "packages": [
+    "npm:better-custom",
+    "npm:@ollama/pi-web-search"
+  ],
+  "steeringMode": "all",
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "theme": "dark",
+  "transport": "auto",
+  "tuiMode": "fullscreen"
+}
