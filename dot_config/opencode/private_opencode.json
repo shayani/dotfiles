@@ -1,14 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode-go/deepseek-v4-flash",
-  "mcp": {
-    "kontilo": {
-      "type": "remote",
-      "url": "https://kontilo.shayani.net/mcp",
-      "headers": {
-        "Authorization": "Bearer {file:~/.config/opencode/.secrets/kontilo-pat}"
-      },
-      "enabled": true
-    }
-  }
+  "model": "opencode-go/deepseek-v4-flash"
 }
