@@ -1,0 +1,85 @@
+#!/bin/sh
+# Instala os pacotes do sistema.
+#
+# Roda novamente apenas quando este script (ou o .Brewfile, via hash abaixo)
+# muda. Em macOS usa `brew bundle`; em Linux detecta Debian/Ubuntu ou Fedora.
+#
+# Hash do .Brewfile: {{ include ".Brewfile" | sha256sum }}
+
+set -eu
+
+SUDO=""
+if [ "$(id -u)" -ne 0 ]; then
+    if command -v sudo >/dev/null 2>&1; then
+        SUDO="sudo"
+    else
+        echo "install-packages: preciso de root ou sudo para instalar pacotes" >&2
+        exit 1
+    fi
+fi
+
+install_macos() {
+    if ! command -v brew >/dev/null 2>&1; then
+        echo "install-packages: brew não encontrado, pulando" >&2
+        return 0
+    fi
+    brew bundle --file="{{ .chezmoi.sourceDir }}/.Brewfile"
+}
+
+install_debian() {
+    export DEBIAN_FRONTEND=noninteractive
+    $SUDO apt-get update
+    wanted=""
+    for p in zsh fish tmux neovim git gh ripgrep fd-find rclone rsync ffmpeg jq \
+             curl wget unzip build-essential kitty; do
+        if apt-cache show "$p" >/dev/null 2>&1; then
+            wanted="$wanted $p"
+        else
+            echo "install-packages: $p não está nos repositórios, pulando" >&2
+        fi
+    done
+    [ -n "$wanted" ] && $SUDO apt-get install -y $wanted
+    return 0
+}
+
+install_fedora() {
+    wanted=""
+    for p in zsh fish tmux neovim git gh ripgrep fd-find rclone rsync ffmpeg-free jq \
+             curl wget unzip gcc gcc-c++ make kitty zellij lazygit; do
+        if dnf -q info "$p" >/dev/null 2>&1; then
+            wanted="$wanted $p"
+        else
+            echo "install-packages: $p não está nos repositórios, pulando" >&2
+        fi
+    done
+    [ -n "$wanted" ] && $SUDO dnf install -y $wanted
+    return 0
+}
+
+case "$(uname -s)" in
+    Darwin)
+        install_macos
+        ;;
+    Linux)
+        distro=""
+        like=""
+        if [ -r /etc/os-release ]; then
+            distro="$(. /etc/os-release && echo "${ID:-}")"
+            like="$(. /etc/os-release && echo "${ID_LIKE:-}")"
+        fi
+        case "$distro $like" in
+            *debian*|*ubuntu*)
+                install_debian
+                ;;
+            *fedora*|*rhel*)
+                install_fedora
+                ;;
+            *)
+                echo "install-packages: distro não suportada (${distro:-desconhecida}), instale os pacotes à mão" >&2
+                ;;
+        esac
+        ;;
+    *)
+        echo "install-packages: SO não suportado ($(uname -s)), pulando" >&2
+        ;;
+esac

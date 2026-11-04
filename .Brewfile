@@ -1,0 +1,27 @@
+# Pacotes do macOS — instalados por run_onchange_install-packages.sh.tmpl
+# Uso manual: brew bundle --file=.Brewfile
+
+brew "chezmoi"
+brew "git"
+brew "gh"
+brew "neovim"
+brew "ripgrep"
+brew "fd"
+brew "lazygit"
+brew "lazydocker"
+brew "tmux"
+brew "zellij"
+brew "fish"
+brew "rclone"
+brew "rsync"
+brew "ffmpeg"
+brew "awscli"
+brew "jq"
+
+cask "1password-cli@beta"
+cask "aerospace"
+cask "anydesk"
+cask "caffeine"
+cask "fluidvoice"
+cask "kitty"
+cask "maccy"
