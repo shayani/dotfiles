@@ -1,13 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode-go/deepseek-v4-flash",
+  "model": "omniroute/f-balanced",
   "providers": {
     "omniroute": {
       "name": "OmniRoute",
       "env": ["OMNIROUTE_API_KEY"],
       "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
-        "baseURL": "https://home2.eland-neon.ts.net:20128/v1"
+        "baseURL": "https://omniroute.eland-neon.ts.net/v1"
       },
       "models": {
         "fernando-chat-daily": {},
